@@ -1,5 +1,4 @@
 import groovy.swing.SwingBuilder
-
 import java.awt.Font
 import javax.swing.JTextArea
 
