@@ -5,7 +5,7 @@
 
 == Agenda ==
 
-  * Dynamic typing
+  * Language dynamism - typing, casting, object construction, method invocation
   * Functional programming in OO languages
   * Scripting
   * Dynamic meta-programming
