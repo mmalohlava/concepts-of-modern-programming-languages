@@ -1,0 +1,18 @@
+#summary One-sentence summary of this page.
+#labels Featured,Phase-Requirements
+
+= Lesson 2 details =
+
+== Agenda ==
+
+  * Advanced dynamic meta-programing - builders
+  * Static meta-programming
+  * Advanced Domain Specific Languages
+  * DSL-based frameworks - Grails, Griffon, Gradle
+
+== Preparation ==
+
+  * Grab Groovy from [http://groovy.codehaus.org/Download the groovy download page]
+  * Grab Grails from [http://grails.org/Download the grails download page]
+  * Install Java (if you don't have it installed) from 
+[http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
