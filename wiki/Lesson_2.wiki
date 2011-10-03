@@ -7,7 +7,7 @@
 
   * Advanced dynamic meta-programing - builders
   * Static meta-programming
-  * Advanced Domain Specific Languages
+  * Domain Specific Languages
   * DSL-based frameworks - Grails, Griffon, Gradle
 
 == Preparation ==
