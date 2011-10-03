@@ -9,7 +9,7 @@
   * Functional programming in OO languages
   * Scripting
   * Dynamic meta-programming
-  * Domain Specific Languages
+  * Intro into Domain Specific Languages
 
 == Preparation ==
 
