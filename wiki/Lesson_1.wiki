@@ -1,0 +1,17 @@
+#summary One-sentence summary of this page.
+#labels Featured,Phase-Requirements
+
+= Lesson 1 details =
+
+== Agenda ==
+
+Dynamic typing
+Functional programming in OO languages
+Scripting
+Dynamic meta-programming
+Domain Specific Languages
+
+== Preparation ==
+
+Grab Groovy from [http://groovy.codehaus.org/Download the groovy download page]
+Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
