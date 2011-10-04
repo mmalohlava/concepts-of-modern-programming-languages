@@ -1,4 +1,0 @@
-#summary test page.
-#labels Featured,Phase-Requirements
-
-this is just a test page
