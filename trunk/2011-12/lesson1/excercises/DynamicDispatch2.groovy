@@ -20,6 +20,7 @@ class Receptionist {
         'We\'re full, please go away!'
     }
 
+//TASK Uncomment and use the default method handler
 //    String call(final visitor) {
     //        welcome visitor
     //    }

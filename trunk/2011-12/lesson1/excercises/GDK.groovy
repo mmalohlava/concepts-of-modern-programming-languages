@@ -22,6 +22,8 @@ final susan = new Woman(name: 'Susan')
 assert [alice, joe] == joe.marry(alice)
 assert [susan, dave] == susan.marry(dave)
 
+//TASK check out the exception that gets thrown after uncommenting the following line
 //assert [joe, dave] == joe.marry(dave)
 
+//TASK override the + operator to marry people
 println 'done'
