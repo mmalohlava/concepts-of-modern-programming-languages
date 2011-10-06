@@ -1,0 +1,22 @@
+#summary A short summary of Clojure tips, tricks and resources.
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
+
+= Links =
+  * _Clojure_ - http://clojure.org/
+  * _!ClojureDocs_ - http://clojuredocs.org/
+    * _Clojure Quick Reference_ - http://clojuredocs.org/quickref/Clojure%20Core
+  * _Coming close to Clojure_ - http://codingndesign.com/blog/?p=239
+  * _Clojure Contrib_ - http://clojure.github.com/clojure-contrib/
+    * set of useful namespaces
+  * _Learn Clojure_ - http://learn-clojure.com/
