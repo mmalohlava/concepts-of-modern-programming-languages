@@ -16,7 +16,11 @@ Add your content here.  Format your content with:
   * _Clojure_ - http://clojure.org/
   * _!ClojureDocs_ - http://clojuredocs.org/
     * _Clojure Quick Reference_ - http://clojuredocs.org/quickref/Clojure%20Core
+  * _Clojure - Functional Programming for the JVM_ - http://java.ociweb.com/mark/clojure/article.html
+    * comprehensive introduction to the Clojure programming language
   * _Coming close to Clojure_ - http://codingndesign.com/blog/?p=239
+    * Video tutorial showing usage of Clojure
   * _Clojure Contrib_ - http://clojure.github.com/clojure-contrib/
     * set of useful namespaces
   * _Learn Clojure_ - http://learn-clojure.com/
+    * another web page showing how to start with Clojure
