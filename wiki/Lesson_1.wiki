@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Lesson 1 details.
 #labels Featured,Phase-Requirements
 
 = Lesson 1 details =
@@ -15,3 +15,33 @@
 
   * Grab Groovy from [http://groovy.codehaus.org/Download the groovy download page]
   * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
+
+== Homework ==
+Your assignment is to define methods of the `MoneyCategory` class so that the code below passes:
+  {{{
+class Money {
+    Integer amount
+    String currency
+
+    Money plus(Money other) {
+        if (this.currency != other.currency) throw new IllegalArgumentException('Cannot add different currencies');
+        new Money(amount: this.amount + other.amount, currency: this.currency)
+    }
+
+    public String toString() {
+        "${amount} ${currency}"
+    }
+}
+
+class MoneyCategory {
+//TASK Define methods of the MoneyCategory class so that the code below passes
+}
+
+use(MoneyCategory) {
+    println 10.eur
+    println 10.eur + 20.eur
+    println 10.usd + 20.usd
+}
+  }}}
+
+The source code of the assignment is accessible in [http://concepts-of-modern-programming-languages.googlecode.com/svn/trunk/2011-12/lesson1/homework/CategoryCurrency.groovy SVN].
