@@ -24,3 +24,4 @@ Add your content here.  Format your content with:
     * set of useful namespaces
   * _Learn Clojure_ - http://learn-clojure.com/
     * another web page showing how to start with Clojure
+  * Online Clojure Console - http://www.try-clojure.org/
