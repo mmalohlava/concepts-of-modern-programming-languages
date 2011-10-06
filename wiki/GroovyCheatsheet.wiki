@@ -1,17 +1,40 @@
-#summary The page contains various tips, tricks and Groovy-related resources.
+#summary The page contains various tips, tricks and Groovy-related resources shown during lectures.
 
 = Introduction =
 
-Add your content here.
+= Basics =
 
+== Strings ==
+{{{
+def value = 'value'
+def longText = """
+  This is very long text!
+  And it uses variable  ${value}
+"""
+def longText2 = '''
+  This is long text does not expanding variable ${value}
+'''
+}}}
 
-= Details =
+= Closures =
+{{{
+Closure plus1 = {int a, int b -> return a + b }
+Closure plus2 = {int a, int b -> a + b }
+Closure plus3 = {a, b -> a + b }
+def plus4 = {a, b -> a + b }
+// implicit parameter "it"
+def plus5 = {it + 5}
+}}}
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Collections =
+
+= Dynamic meta-programming =
+ == Categories ==
+
+ == DSLs == 
+
 = Links =
-  * groovy page
-  * groovy web console
-  * groovy documentation
+  * _Groovy Official Homepage_ - http://groovy.codehaus.org
+  * _Groovy CZ_ - http://www.groovy.cz/
+  * Grails - http://grails.org
+  * Online Groovy Console - http://groovyconsole.appspot.com/
