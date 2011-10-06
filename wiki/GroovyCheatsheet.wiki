@@ -11,6 +11,7 @@ def longText = """
   This is very long text!
   And it uses variable  ${value}
 """
+
 def longText2 = '''
   This is long text does not expanding variable ${value}
 '''
@@ -27,6 +28,8 @@ def plus5 = {it + 5}
 }}}
 
 = Collections =
+
+= Scripting =
 
 = Dynamic meta-programming =
  == Categories ==
