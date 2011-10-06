@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Lesson 2 introducing staci meta-programming, DSLs and various Groovy frameworks.
 #labels Featured,Phase-Requirements
 
 = Lesson 2 details =
