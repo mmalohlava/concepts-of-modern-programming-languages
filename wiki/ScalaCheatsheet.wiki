@@ -9,3 +9,4 @@
 = Links =
  * _Scala_ - http://www.scala-lang.org/
  * Scala Console - http://www.simplex3d.org/console/
+ * _Scala Cheat Sheet_ - https://github.com/joulieboolie/scala-cheatsheet
