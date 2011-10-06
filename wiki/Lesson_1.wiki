@@ -1,4 +1,4 @@
-#summary Lesson 1 details.
+#summary Groovy introduction, collections, functional programming, meta-programming, DSLs.
 #labels Featured,Phase-Requirements
 
 = Lesson 1 details =
