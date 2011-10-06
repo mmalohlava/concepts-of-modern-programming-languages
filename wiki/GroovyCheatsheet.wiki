@@ -98,6 +98,9 @@ Integer.metaClass {
 10.eur
 }}}
 
+= IDE = 
+The best way how to start with Groovy is to use _Groovy Console_ which is a part of Groovy installation.
+
 = Links =
   * _Groovy Official Homepage_ - http://groovy.codehaus.org
   * _Groovy CZ_ - http://www.groovy.cz/
