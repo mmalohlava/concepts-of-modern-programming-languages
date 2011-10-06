@@ -33,7 +33,9 @@ def plus5 = {it + 5}
 
  == Currying ==
  {{{
-
+def plus = {a, b -> a + b }
+def plusWith4 = plus.curry 4
+assert 7 == plusWith4(3)
  }}}
 
 = Collections =
@@ -65,7 +67,7 @@ class MyMath {
     }
 }
 
-// toto je kategorie
+// use MyMath as a category
 use(MyMath) {
  foo()
 }
@@ -80,12 +82,20 @@ use(org.codehaus.groovy.runtime.TimeCategory) {
 }
 }}}
 
- == MetaClass == 
+ == !MetaClass == 
 {{{
 final oldTrim = s.metaClass.getMetaMethod('trim')
 String.metaClass.trim = {->
  '*' + oldTrim.invoke(delegate) + '*'
 }
+}}}
+
+{{{
+Integer.metaClass {
+    getEur = {-> delegate + "E" }
+  }
+}
+10.eur
 }}}
 
 = Links =
