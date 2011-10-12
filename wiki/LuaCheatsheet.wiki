@@ -1,0 +1,12 @@
+#summary The page provides various tips, tricks and Lua-related resources.
+
+= Introduction =
+
+= Basics =
+
+= IDE =
+
+= Links =
+ * _Lua_ - http://www.lua.org/
+ * _Passing a Language through the Eye of a Needle_ - http://queue.acm.org/detail.cfm?id=1983083
+   * Lua extensions explained
