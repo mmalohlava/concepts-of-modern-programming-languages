@@ -15,3 +15,5 @@
   * Grab Groovy from [http://groovy.codehaus.org/Download the groovy download page]
   * Grab Grails from [http://grails.org/Download the grails download page]
   * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
+
+The source code of the assignment is accessible in [http://concepts-of-modern-programming-languages.googlecode.com/svn/trunk/2011-12/lesson2/homework/CategoryCurrency.groovy SVN].
