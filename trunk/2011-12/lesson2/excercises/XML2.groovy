@@ -1,8 +1,6 @@
 final out = new StringWriter()
 def builder = new groovy.xml.MarkupBuilder(out)  // Construct a builder
 
-// Create a simple xml markup
-    
 final doc = builder.order() {
     beer(count:2) {
         price {
@@ -10,12 +8,10 @@ final doc = builder.order() {
             current 'CZK'
         }
     }
-    if (true) {
-        tea(count:3) {
-            price {
-                amount 20
-                current 'CZK'
-            }
+    tea(count:3) {
+        price {
+            amount 20
+            current 'CZK'
         }
     }
 }

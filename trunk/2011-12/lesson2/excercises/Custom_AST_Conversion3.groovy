@@ -24,7 +24,7 @@ public class NumberConversionTransformation3 implements ASTTransformation {
         List<ASTNode> res = ab.buildFromSpec {
             method('convertToNumber', Opcodes.ACC_PUBLIC, Integer) {
                 parameters {
-                    parameter 'parameter': String.class
+                    parameter 'valueToConvert': String.class
                 }
                 exceptions {
                     classNode NumberFormatException
@@ -33,7 +33,7 @@ public class NumberConversionTransformation3 implements ASTTransformation {
                     returnStatement {
                         staticMethodCall(Integer, "parseInt") {
                             argumentList {
-                                variable "parameter"
+                                variable "valueToConvert"
                             }
                         }
                     }

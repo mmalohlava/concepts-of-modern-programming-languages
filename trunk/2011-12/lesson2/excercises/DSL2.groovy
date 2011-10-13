@@ -28,7 +28,7 @@ class Order {
     ]
 
     String toString() {
-        "Order of $meal with ${ingredients.join(' and ')} to $address"
+        "*An order of $meal with ${ingredients.join(' and ')} to $address*"
     }
 }
 

@@ -19,7 +19,7 @@ class Order {
     ]
 
     String toString() {
-        "Order of $meal to $address"
+        "*An order of $meal to $address*"
     }
 }
 

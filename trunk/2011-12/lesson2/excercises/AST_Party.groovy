@@ -1,6 +1,6 @@
 class Party {
     String name
-    Date when
+    String location
     
     Date startTime() {
         new Date()
