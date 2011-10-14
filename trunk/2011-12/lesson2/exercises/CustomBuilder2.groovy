@@ -1,7 +1,7 @@
 class MyBuilder {
 
     def indent = 1
-    
+
     def invokeMethod(String methodName, args) {
         def result = '';
         if (args.size() > 0) {
@@ -9,7 +9,7 @@ class MyBuilder {
             closure.delegate = this
             result = closure()
         }
-        return "<$methodName>\n${' '*indent}$result\n${' '*(indent-1)}</$methodName>"
+        return "<$methodName>\n${' ' * indent}$result\n${' ' * (indent - 1)}</$methodName>"
     }
 }
 

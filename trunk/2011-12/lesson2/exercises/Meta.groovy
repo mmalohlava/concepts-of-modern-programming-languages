@@ -20,7 +20,7 @@ use(TrimCategory) {
 //TASK Find out which method gets invoked here
 
     println a.respondsTo('trim')
-    println '   groovy '.trim()    
+    println '   groovy '.trim()
 }
 
 println 'done'
@@ -28,7 +28,7 @@ println 'done'
 
 class TrimCategory {
     static final metaMethod = String.metaClass.getMetaMethod('trim')
-    
+
     static String trim(String s) {
         '*' + metaMethod.invoke(s, [] as Class[]) + '*'
     }

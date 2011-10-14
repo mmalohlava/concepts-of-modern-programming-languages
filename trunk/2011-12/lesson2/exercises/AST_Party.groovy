@@ -1,7 +1,7 @@
 class Party {
     String name
     String location
-    
+
     Date startTime() {
         new Date()
     }

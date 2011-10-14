@@ -3,13 +3,13 @@
 def builder = new groovy.xml.MarkupBuilder(out)  // Construct a builder
 
 // Negotiate the protocol
- 
+
 println "HTTP/1.0 200 OK"
 println "Content-Type: text/html"
-println "" 
+println ""
 
 // Create a simple html markup
-    
+
 final doc = builder.html {
     head {
         title 'Demo'

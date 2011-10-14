@@ -1,16 +1,22 @@
-import java.lang.annotation.*
-import org.codehaus.groovy.transform.*
-import org.codehaus.groovy.ast.*
-import org.codehaus.groovy.control.*
-import org.codehaus.groovy.ast.stmt.*
-import static org.codehaus.groovy.control.CompilePhase.*
-import org.codehaus.groovy.ast.builder.*
-import org.codehaus.groovy.ast.expr.*
+import java.lang.annotation.ElementType
+import java.lang.annotation.Retention
+import java.lang.annotation.RetentionPolicy
+import java.lang.annotation.Target
+import org.codehaus.groovy.ast.ASTNode
+import org.codehaus.groovy.ast.ClassHelper
+import org.codehaus.groovy.ast.ClassNode
+import org.codehaus.groovy.ast.Parameter
+import org.codehaus.groovy.ast.builder.AstBuilder
+import org.codehaus.groovy.control.SourceUnit
+import org.codehaus.groovy.transform.ASTTransformation
+import org.codehaus.groovy.transform.GroovyASTTransformation
+import org.codehaus.groovy.transform.GroovyASTTransformationClass
 import org.objectweb.asm.Opcodes
+import static org.codehaus.groovy.control.CompilePhase.SEMANTIC_ANALYSIS
 
-@Retention (RetentionPolicy.SOURCE)
-@Target ([ElementType.TYPE])
-@GroovyASTTransformationClass ("NumberConversionTransformation1")
+@Retention(RetentionPolicy.SOURCE)
+@Target([ElementType.TYPE])
+@GroovyASTTransformationClass("NumberConversionTransformation1")
 public @interface NumberConversion1 {}
 
 
@@ -24,7 +30,7 @@ public class NumberConversionTransformation1 implements ASTTransformation {
         List<ASTNode> res = ab.buildFromString('''
                 Integer.parseInt("$valueToConvert")
             ''')
-        
+
         def param = new Parameter(ClassHelper.STRING_TYPE, "valueToConvert")
         annotatedClass.addMethod("convertToNumber", Opcodes.ACC_PUBLIC, ClassHelper.Integer_TYPE, [param] as Parameter[], [] as ClassNode[], res[0])
     }

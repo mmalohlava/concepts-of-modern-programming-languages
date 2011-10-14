@@ -5,8 +5,8 @@ drivers = ['Joe', 'Alice', 'Dave', 'John', 'Susan']
 
 final doc = builder.race() {
     drivers.eachWithIndex {name, index ->
-        car(number:index) {
-            driver(name : name)
+        car(number: index) {
+            driver(name: name)
         }
     }
 }

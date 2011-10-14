@@ -1,7 +1,7 @@
 import groovy.swing.SwingBuilder
 import javax.swing.JFrame
 
-final JFrame frame = new SwingBuilder().frame(title:'Demo') {
+final JFrame frame = new SwingBuilder().frame(title: 'Demo') {
     menuBar {
         menu 'File', {
             menuItem 'Open', actionPerformed: {println 'Opening'}
@@ -15,15 +15,15 @@ final JFrame frame = new SwingBuilder().frame(title:'Demo') {
     vbox() {
         label('Demo')
         scrollPane() {
-            textArea(id:'messages', columns:50, rows:20)
+            textArea(id: 'messages', columns: 50, rows: 20)
         }
         hbox {
-            ['Java', 'Groovy'].each{lang -> button(text:"Click $lang", actionPerformed:{messages.text+="Clicked $lang\n"})}
+            ['Java', 'Groovy'].each {lang -> button(text: "Click $lang", actionPerformed: {messages.text += "Clicked $lang\n"})}
         }
     }
 }
 
-frame.visible=true
+frame.visible = true
 frame.pack()
 
 //TASK Add a new button for Scala, which when clicked clears the text area and prints out 'Scala'

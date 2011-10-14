@@ -1,10 +1,10 @@
 class TaxCalculator {
     @Lazy int taxRate = downloadTaxRate()
-    
+
     long calculateTotalPrice(long price) {
-        price + price*taxRate/100
+        price + price * taxRate / 100
     }
-    
+
     private static int downloadTaxRate() {
         Math.abs('http://groovy.cz'.toURL().text.hashCode())
     }
