@@ -25,7 +25,7 @@ public class UnsupportedTransformation implements ASTTransformation {
         //...
         // The "Unsupported" transformation should make the annotated methods throw the UnsupportedOperationException
         // Fill in the missing AST generation code to make the script pass
-        // You can take inspiration from excercises
+        // You can take inspiration from exercises
     }
 }
 
