@@ -1,4 +1,5 @@
-import groovy.transform.*
+import groovy.transform.ToString
+import groovy.transform.TupleConstructor
 
 @TupleConstructor @ToString class Person {
     String firstName

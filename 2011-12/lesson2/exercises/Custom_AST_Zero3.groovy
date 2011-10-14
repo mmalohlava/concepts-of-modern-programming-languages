@@ -1,16 +1,20 @@
-import java.lang.annotation.*
-import org.codehaus.groovy.transform.*
-import org.codehaus.groovy.ast.*
-import org.codehaus.groovy.control.*
-import org.codehaus.groovy.ast.stmt.*
-import static org.codehaus.groovy.control.CompilePhase.*
-import org.codehaus.groovy.ast.builder.*
-import org.codehaus.groovy.ast.expr.*
+import java.lang.annotation.ElementType
+import java.lang.annotation.Retention
+import java.lang.annotation.RetentionPolicy
+import java.lang.annotation.Target
+import org.codehaus.groovy.ast.ASTNode
+import org.codehaus.groovy.ast.ClassNode
+import org.codehaus.groovy.ast.builder.AstBuilder
+import org.codehaus.groovy.control.SourceUnit
+import org.codehaus.groovy.transform.ASTTransformation
+import org.codehaus.groovy.transform.GroovyASTTransformation
+import org.codehaus.groovy.transform.GroovyASTTransformationClass
 import org.objectweb.asm.Opcodes
+import static org.codehaus.groovy.control.CompilePhase.SEMANTIC_ANALYSIS
 
-@Retention (RetentionPolicy.SOURCE)
-@Target ([ElementType.TYPE])
-@GroovyASTTransformationClass ("ZeroTransformation3")
+@Retention(RetentionPolicy.SOURCE)
+@Target([ElementType.TYPE])
+@GroovyASTTransformationClass("ZeroTransformation3")
 public @interface Zero3 {}
 
 //TASK Complete the transformation code at the indicated position so as the test passes

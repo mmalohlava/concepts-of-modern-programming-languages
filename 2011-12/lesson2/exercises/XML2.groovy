@@ -2,13 +2,13 @@ final out = new StringWriter()
 def builder = new groovy.xml.MarkupBuilder(out)  // Construct a builder
 
 final doc = builder.order() {
-    beer(count:2) {
+    beer(count: 2) {
         price {
             amount 10
             current 'CZK'
         }
     }
-    tea(count:3) {
+    tea(count: 3) {
         price {
             amount 20
             current 'CZK'

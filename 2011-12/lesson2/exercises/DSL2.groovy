@@ -8,7 +8,7 @@ println 'done'
 
 
 def order(requestedMeal) {
-    final newOrder = new Order(meal : requestedMeal)
+    final newOrder = new Order(meal: requestedMeal)
     newOrder.meals[requestedMeal]
 }
 
@@ -17,14 +17,14 @@ class Order {
     final ingredients = []
     String address = ''
     final meals = [
-        pizza : [with : {ingredient -> ingredients << ingredient;additions},
-                 menuDuJour : {->ingredients << 'surprise';additions}
-                ],
-        cake : [with : {ingredient -> ingredients << ingredient;additions}],        
+            pizza: [with: {ingredient -> ingredients << ingredient; additions},
+                    menuDuJour: {-> ingredients << 'surprise'; additions}
+            ],
+            cake: [with: {ingredient -> ingredients << ingredient; additions}],
     ]
     final additions = [
-        and :  {ingredient -> ingredients << ingredient;additions},
-        to :  {place -> address = place;delegate}
+            and: {ingredient -> ingredients << ingredient; additions},
+            to: {place -> address = place; delegate}
     ]
 
     String toString() {

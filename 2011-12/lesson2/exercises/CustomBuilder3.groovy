@@ -1,5 +1,3 @@
-import groovy.util.BuilderSupport
-
 class IndentBuilder extends BuilderSupport {
     protected void setParent(Object parent, Object child) {
         parent.children << child
@@ -28,16 +26,17 @@ class Item {
     final String name
     final List children = []
     String value
-    
+
     public Item(String name) {
         this.name = name
     }
 
     @Override String toString() {
         buildString(0)
-    }    
+    }
+
     @Override String buildString(indent) {
-        "\n${' '*indent}<$name>" + (value ? "\n${' '*(indent+1)}$value" : children.collect {it.buildString(indent+1)}.join()) + "\n${' '*indent}</$name>"
+        "\n${' ' * indent}<$name>" + (value ? "\n${' ' * (indent + 1)}$value" : children.collect {it.buildString(indent + 1)}.join()) + "\n${' ' * indent}</$name>"
     }
 }
 

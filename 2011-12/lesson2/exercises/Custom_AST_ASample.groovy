@@ -4,7 +4,7 @@
 class Calculator {
     @Requires("divisor != 0")
     public int divide10By(divisor) {
-        10/divisor
+        10 / divisor
     }
 
     @Requires("a > b")
