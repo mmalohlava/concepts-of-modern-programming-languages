@@ -6,7 +6,6 @@
 == Agenda ==
 
   * Griffon introduction - building SWT application
-  * Delegate
   * Advanced dynamic meta-programing - builders
   * Static meta-programming
   * Domain Specific Languages
