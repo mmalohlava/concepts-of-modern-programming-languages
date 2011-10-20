@@ -20,4 +20,20 @@
   * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
 
 == Homework ==
+
+The assignment is to implement the "Unsupported" transformation which should make the annotated methods throw the {{{UnsupportedOperationException}}}. Fill in the missing AST generation code to make the script pass. You can take inspiration from exercises.
+{{{
+class Calculator {
+    def plus(a, b) {
+        a + b
+    }
+
+    @Unsupported
+    def minus(a, b) {}
+
+    @Unsupported
+    def divide(a, b) {}
+}
+}}}
+
 The source code of the assignment is accessible in [http://concepts-of-modern-programming-languages.googlecode.com/svn/trunk/2011-12/lesson2/homework/Calculator.groovy SVN].
