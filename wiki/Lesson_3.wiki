@@ -1,22 +1,11 @@
-#summary Introduction of static meta-programming, DSLs and various Groovy frameworks.
+#summary Introduction of static meta-programming, DSLs in Clojure and Scala.
 #labels Featured,Phase-Requirements
 
-= Lesson 2 details =
+= Lesson 3 details =
 
 == Agenda ==
 
-  * Griffon introduction - building SWT application
-  * Advanced dynamic meta-programing - builders
-  * Static meta-programming
-  * Domain Specific Languages
-  * DSL-based frameworks - Grails, Griffon, Gradle
 
 == Preparation ==
 
-  * Checkout the recent state of our Project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
-  * Grab Groovy from [http://groovy.codehaus.org/Download the groovy download page]
-  * Grab Grails from [http://grails.org/Download the grails download page]
-  * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
-
 == Homework ==
-The source code of the assignment is accessible in [http://concepts-of-modern-programming-languages.googlecode.com/svn/trunk/2011-12/lesson2/homework/Calculator.groovy SVN].
