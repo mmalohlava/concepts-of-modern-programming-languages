@@ -23,9 +23,10 @@
  * Clojure DSLs
  * Clojure eco-system
 
-
+<wiki:comment>
 Examples
  * symbolic derivation in lisp http://stackoverflow.com/questions/2296385/homoiconicity-how-does-it-work
+</wiki:comment>
 
 
 == Preparation ==
