@@ -1,0 +1,18 @@
+#summary A list of various resources involving code katas.
+
+= What is code kata? =
+Code Katas were originally created by Dave Thomas of the Pragmatic Programmers as small exercises/problems to solve
+. They were generally small with an interesting twist, or two. You can find more information on the [http://codekata.pragprog.com/ Code Katas site].
+
+= Links =
+  * General problems 
+    * http://rosettacode.org/wiki/Main_Page
+    * http://codingbat.com/
+    * http://www.codingdojo.org/
+    * http://www.katacasts.com/
+  * Math-specific problems 
+    * http://projecteuler.net/ 
+  * Clojure specific katas 
+    * http://www.4clojure.com/problems 
+  * International Olympiad in Informatics
+    * http://en.wikipedia.org/wiki/International_Olympiad_in_Informatics
