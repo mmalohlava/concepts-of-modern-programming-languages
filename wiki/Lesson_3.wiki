@@ -6,20 +6,20 @@
 == Agenda ==
 
  * Clojure  introduction 
-     * collections
-     * sequences
-       * lazy evaluation - infinite sequences
-     * tail-recursion
-     * desctructuring
-     * metadata
-       * pre, post-conditions
-          * integration with Java
-     * SWT graphics
-     * higher-order functions
+     * Collections
+     * Sequences
+       * Lazy evaluation - infinite sequences
+     * Tail-recursion
+     * Desctructuring
+     * Metadata
+       * pre, post-conditions         
+     * Interoperability with Java
+       * SWT graphics
+     * Higher-order functions
  * Clojure Meta-programming
-     * protocols
-     * multi-methods - inheritance - power of maps
-     * macro
+     * Protocols
+     * Multi-methods - inheritance - power of maps
+     * Macros
  * Clojure DSLs
  * Clojure eco-system
 
