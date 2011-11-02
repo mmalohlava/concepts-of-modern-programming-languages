@@ -1,42 +1,38 @@
 (ns meta.test01)
 
-; ==============
-; === Macros ===
-; ==============
+; =============================
+; === Clojure multi methods ===
+; =============================
 
-; wrong version of unless
-(defn unless [condition body] (if (not condition) body))
-(unless true (println "This text should not be printed"))
-(unless false (println "This is the text which the user can see"))
-                                                                                                                                   
-(macroexpand meta)
-(macroexpand 'meta)
-(macroexpand ''something)
-(macroexpand `meta)
-(macroexpand `~meta)
+; class based dispatch
+(= String (class "This is a string"))
+(defmulti f class)
+(defmethod f String [arg] (println "Argument type is string"))
+(defmethod f Number [arg] (println "Argument type is number"))
+(defmethod f :default [arg] (println "Argument type is" (class arg)))
 
-(macroexpand '#(* %1 2)) ; macroexpansion allows to treat code as a list
-; If you don’t want a function to execute right away, quote it.
-; will replace the arguments intact. Our unless will look like this:
+(f "foo")
+(f 10)
+(f :jey)
 
-; redefine unless
-(defmacro unless 
-  ([condition body ] (list 'if (list 'not condition) body))
-  ([condition body else-body] `(if (not ~condition) ~body ~else-body))
+; multimethod's dispatch function
+(defn crazy-dispatch [_] (if (== (rand-int 2) 1)
+                                 :say-truth
+                                 :say-lie
+                            )
   )
 
-(macroexpand '(unless cond body else))
-(macroexpand-1 '(unless cond body else))
+(defmulti lier crazy-dispatch)
+(defmethod lier :say-truth [arg] (println "Argument " arg "is a " (class arg)))
+(defmethod lier :say-lie [arg] (println "Argument " arg "is a String"))
+(defmethod lier :default [arg] (println "Argument " arg "is a" (class arg)))
 
-(unless true (println "AHOJ") (println "ELSE_AHOJ"))
-(unless false (println "AHOJ") (println "ELSE_AHOJ"))
+(lier "X")
+(lier 1)
+(lier :blue)
+(lier :blue)
 
+; =================
+; Assignment: Create a multi method h that dispatches on the value of the argument being in an interval <1, 100>
 
-(defmacro resolution [] `x)
-(macroexpand '(resolution))
-(def x 100)
-(let [x 109] (resolution))
-
-
-
-
+; debug (clojure.repl/pst *e) ; *e refers last exception

@@ -1,5 +1,6 @@
-(ns collections.test01)
-(use 'clojure.repl)
+(ns collections.test01
+ (:use [clojure.repl :only [doc source]]))
+  
 
 ; ===================
 ; === Collections ===
@@ -9,14 +10,9 @@
 (def testVector [1 2 3])
 (def testLongVector [1 2 3 4 5 6 7 8 9 10])
 (def testList '(1 2 3))
-(def testShortList (list 1 2))
 (def testLongList ( quote (1 2 3 4 5 6 7 8 9 10)))
 
-(= testVector testList)
-
 ; count function 
-; == is for number comparison
-; = for object comparison
 (== (count '(1)) 1)
 (== (count testVector) 3)
 (== (count testList) 3)
@@ -33,9 +29,8 @@
 (= (map #(* 2 %) testVector) (map #(* 2 %1) testList))
 (map + testVector testList)
 (map + testVector testLongList)
-(map + testList testLongVector)
-(map + testLongList testLongVector)
 (map + testLongList testLongVector testList)
+
 ; compare values
 (map #(== %1 %2) testList testVector)
 
@@ -44,16 +39,20 @@
 (apply + testList)
 ; all items are passed as arguments
 (apply println testLongList)
-; ???? (apply and (map #(== %1 %2) testList testVector))
 
 ; items access
 (first testLongVector)
 (last testLongVector)
 (nth testLongVector 3)
+
 (next testLongList)
+
 (butlast testLongList)
+
 (filter #(> %1 5) testLongList)
+
 (drop-last 3 testLongList)
+
 (nthnext testLongList 3)
 
 ;
@@ -61,44 +60,61 @@
 ;
 ; Tests on condition
 (every? #(number? %1) testLongList) 
+
 (not-every? #(string? %1) testLongList)
+
 (not-every? #(> 5 %1) testLongList)
-(not-every? #(> 5 %1) testList)
+
 (some #(== 10 %) testLongVector)
+
 (not-any? #(== 0 %) testLongList)
 
 ;
 ; lists
 ; 
 (def countries '("Spain", "Czech Republic", "USA"))
+
 (some #(= % "USA") countries)
-(contains? (set testLongList) 10)
+
 ; add a new item
-(conj testShortList 0)
-(cons 0 testShortList)
-(remove #(= % 10) testLongVector)
+(conj countries "Germany")
+
+(cons "Germany" countries)
+
+; do not swap function parameters
+(cons countries "Germany") ; the second parameter is a sequence. String is implicitly converted to a sequence of characters
+
+(remove #(= % "USA") countries)
+
 ; into 
-(into testShortList testLongList)
+(into testList testLongList)
 ; more peek, pop treat a list as a stack
 
 ;
 ; sets
 ;
 (def testSet (set [1 2 3 4 5 6 1 2 3 4 5 6]))
+
 (= (count testSet) 6)
+
 (def testSortedSet (sorted-set 10 100 20 30 1 2 3 4 5))
 
 ; set can be used as a function
 (testSortedSet 100)
-(testSortedSet 101)
+
+(testSortedSet 101) ; nil and false do not represent truth
+
+; #{} syntax is used to define a set
 (#{1 2 3} 3)
 (#{1 2 3} 33)
 
 
 ; set operation
-(disj testSet testSortedSet)
-(union testSet testSortedSet)
+(clojure.set/intersection testSet testSortedSet)
+(clojure.set/union testSet testSortedSet)
+(clojure.set/difference testSet testSortedSet)
 
+; a set used as a function again
 (def vowel? (set "aeiou"))
 (vowel? (first "abvd"))
 (vowel? (first "bvd"))
@@ -107,7 +123,7 @@
 ;
 ; maps
 ;
-(def testMap {:name "Michal"
+(def SIS-item {:name "Michal"
               :surname "Malohlava"
               :address "Opava"
               :teaching {
@@ -121,17 +137,29 @@
   )
 
 ; field access
-(= (get testMap :name) (testMap :name) (:name testMap))
-(keys testMap)
-(vals testMap)
-(assoc testMap :address "Praha" :pernament-address "Opava")
-(doseq [[key val] (:address testMap) ] (println (str "Key: " (name key) ", Value: " (name val))))
+(= (get SIS-item :name) (SIS-item :name) (:name SIS-item))
+
+(keys SIS-item)
+
+(vals SIS-item)
+
+; add a new item into a map
+(assoc SIS-item :address "Praha" :pernament-address "Opava")
+
+(doseq [[key val] SIS-item ] 
+  (println 
+    (str "Key: " 
+         (name key) 
+         ", Value: " 
+         (if (string? val) (name val) val))))
 
 ; access inner maps
-(get-in testMap [:teaching :lecture :name])
+(get-in SIS-item [:teaching :lecture :sisid])
+
 ; f1(f2(f3(x)))
-(-> testMap :teaching :lecture :sisid)
-(reduce get testMap [:teaching :lecture :sisid])
+(-> SIS-item :teaching :lecture :sisid)
+
+(reduce get SIS-item [:teaching :lecture :sisid])
 
 
 

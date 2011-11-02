@@ -1,32 +1,33 @@
 (ns meta.test03)
 
-; =============================
-; === Clojure multi methods ===
-; =============================
+; ==============
+; === Macros ===
+; ==============
 
-; class based dispatch
-(= String (class "This is a string"))
+; wrong version of unless
+(defn unless [condition body] (if (not condition) body))
+(unless true (println "This text should not be printed"))
+(unless false (println "This is the text which the user can see"))
 
-; TODO normal class-based dispatch
-;
-
-
-; (class "X"); (class class); (class :key); (class 'neco); class {}; (class ()); (class #{})
-; multimethods, specifies dispatch method
-(defn crazy-dispatch [_] (if (== (rand-int 2) 1)
-                                 :say-truth
-                                 :say-lie
-                            )
+; redefine unless with help of macro
+(defmacro unless 
+  ([condition body ] (list 'if (list 'not condition) body))
   )
 
-(defmulti lier crazy-dispatch)
-(defmethod lier :say-truth [arg] (println arg "is a " (class arg)))
-(defmethod lier :say-lie [arg] (println arg "is a String"))
-(defmethod lier :default [arg] (println arg "is a" (class arg)))
+(macroexpand '(unless cond body))
 
-;(dotrace [lier] (lier "X")) ; requires clojure.contrib namespace
-(lier "X")
-(lier 1)
-(lier :blue)
-(lier :blue)
+(unless true (println "This text will not be printed"))
+
+; note about arguments expansion
+(defmacro resolution [] `x)
+(macroexpand '(resolution))
+(def x 100)
+(let [x 109] (resolution))
+
+; ==================
+; Assignment: modify macro unless to have else branch
+;(unless true (println "Unless true") (println "Else branch"))
+
+
+
 
