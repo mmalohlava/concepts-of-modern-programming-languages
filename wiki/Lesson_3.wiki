@@ -30,10 +30,10 @@ Examples
 
 
 == Preparation ==
- * Checkout the recent state of our Project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
+ * Checkout the recent state of our project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
  * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
  * Grab the latest version of _Clooj IDE_ from [https://github.com/arthuredelstein/clooj/downloads Clooj download page]
- * Optionally Grab the latest version of _Leiningen_ from [https://github.com/technomancy/leiningen its download page]
+ * Optionally grab the latest version of _Leiningen_ from [https://github.com/technomancy/leiningen its download page]
 
 == More Examples ==
  * http://www.4clojure.com/problems
