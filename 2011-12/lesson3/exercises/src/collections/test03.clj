@@ -1,8 +1,8 @@
 (ns collections.test03)
 
-; ======================
-; === Structures     ===
-; ======================
+; ==================
+; === Structures ===
+; ==================
 
 ; structure
 (defstruct person-struct :name :surname :address :tel)
@@ -27,7 +27,7 @@
 ; psc is HOF (higher-order function)
 (psc person-franta)
 
-; ====
+; =============
 (def psc-slow #(-> % :address :psc))
 (psc-slow person-franta)
 
@@ -36,3 +36,9 @@
 
 (stopwatch psc 10000)
 (stopwatch psc-slow 10000)
+
+
+
+
+
+
