@@ -161,6 +161,10 @@
 
 (reduce get SIS-item [:teaching :lecture :sisid])
 
+; ================
+; Assignment: write a function which finds indexes of elements satisfying given condition
+
+
 
 
 
