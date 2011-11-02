@@ -1,0 +1,5 @@
+Clooj IDE
+===============
+
+You can download it from https://github.com/arthuredelstein/clooj/downloads
+

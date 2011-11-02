@@ -1,39 +1,49 @@
 (ns dsl.test01)
+(:use 'clojure.string)
 
-(defmacro ^{:tag-A "testovaci tag"} objednej 
-  "ahoj dokumentace"
-  [& polozky] `(println str "pocet polozek v poli " '~polozky "je"  (count '~polozky) " a k tomu" ~@polozky))
+; ===========
+; === DSL ===
+; ===========
 
-(macroexpand '(objednej :a :b :c :d :e))
-(objednej :a :b :c)
+(defn expand-expr [expr]
+  (if (coll? expr)
+    (if (= (first expr) `unquote)
+      "?"
+      (let [[op & args] expr]
+        (str "(" (clojure.string/join (str " " op " ")
+                           (map expand-expr args)) ")")))
+    expr))
 
-; ============= meta data =================
-(^{:muj-tag "nejaka metadata"} objednej)
-(with-meta 'objednej {:muj-tag2 "nejaka metadata navic"})
-(meta #'objednej)
-
-; ========= pre -post conditions ====
-(defn test [x]
-  {
-    :pre [(> x 10)]
-    :post [(< % 15)]
-  }
-  x)
-
-(test (* 3 6))
-
-(defmacro chci
-  [& polozky] `())
-
-; =============== === ===============
-; =============== DSL ===============
-; =============== === ===============
-; EXAMPLE (chci (pizza with tomato and fish))
-(take 20 (range))
-
-(def demonstrate-math-op (juxt + - * /))
-(demonstrate-math-op 1 2)
+(declare expand-clause)
+(def clause-map
+  {'SELECT
+   (fn [fields & clauses]
+     (apply str "SELECT " (clojure.string/join ", " fields)
+            (map expand-clause clauses)))
+   'FROM
+   (fn [table & joins]
+     (apply str " FROM " table
+            (map expand-clause joins)))
+   'LEFT-JOIN (fn [table on expr]
+                (str " LEFT JOIN " table
+                     " ON " (expand-expr expr)))
+   'WHERE
+   (fn [expr]
+     (str " WHERE " (expand-expr expr)))})
 
 
+(defn expand-clause [[op & args]]
+  (apply (clause-map op) args))
 
+(defmacro SELECT [& args]
+  [(expand-clause (cons 'SELECT args))
+   (vec (for [n (tree-seq coll? seq args)
+              :when (and (coll? n) (= (first n) `unquote))]
+          (second n)))])
+
+(defn query [max min] 
+  (SELECT [a b c] 
+          (FROM X
+                (LEFT-JOIN Y :ON (= X.a X.b)))
+          (WHERE (AND (< a ~min) (< b ~max)))))
 

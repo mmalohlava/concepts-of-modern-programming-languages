@@ -6,50 +6,53 @@
 
 ; This is a comment
 
+; 
+; s-expression: (a b c)
+;  - (...) is a list
+;  - symbol is a b c
+;  - Clojure tries to evaluate a list considering a as function/macro/special form and b, c its parameters
+
+; form is a Clojure object to be evaluated, e.g., list, vectors, numbers, keywords
+; special form is a form with special syntax or evaluation rule (e.g, dot operator, def, defn, ...)
+
+(== 6 (* 2 3)) 
+  
 (= "abc" (str "a" "b" "c"))
+
+; keyword = symbolic identifier (its value is itself)
 (= (keyword "hello") :hello)
 
 ; define a list
-(list 1 2 3) ; evaluates items
-'(1 2 3) ; does not evaluate items
-(:red :green :blue) ; list of keywords 
+(list 1 2 3) ; evaluates items => (list a 2 3) does not work
 
-; vector
-[1 2 3]
-(= '(1 2 3) [1 2 3])
+; quoting
+'(1 "two" 3 (list 1 2 3)) ; does not evaluate any items
+'(1 (* 2 3))
 
-; = is a method call
-(= (list 1 2 3) '(1 2 3) '(1, 2, 3))
+; syntactic quoting `
+`(1 (* 2 3))
+; unquoting
+`(1 ~(* 2 3)) ; ~ permits evaluation
+`(1 ~@'(* 2 3)) ; ~@ unpacks the list
+
+
+; list of keywords 
+'(:red :green :blue) 
 
 ; define a global BINDING (my-list is immutable object)
 (def my-list '(a b c))
+
 ; use let for local bindings (hide global def)
-(def my-value (let [x 1 y x] y)) 
-(= my-value 1)
-; more bindings (thread-local) will be introduced later 
-
-; define a FUNCTION 
-(defn print-list [l] (println (concat "This is a list: " l)))
-(print-list my-variable)
-
-; define a method with two parameters
-(defn print-two-lists [l1 l2] (println (concat "List1: " l1 ", List 2:" l2))) 
-(print-two-lists muj-list muj-list)
-
-; define anonymous function
-(map (fn [x] (* 2 x)) '(1 2 3))
-(map #(* 2 %1) '(2 3 4))
+(let [x 1 y x] (+ x y))
+; (println x) ; does not work because x is not defined
 
 ; keywords
-(def RGB '(:red :blue :cyan))
-(= (:red :green :blue) RGB)
+(def RGB '(:red :cyan :blue))
+(= '(:red :green :blue) RGB)
 
+; ==============================
 ; Assignment: correct definition of RGB using already defined RGB list
-; be aware that all dat are immutable
-;(def RGB '( ~(first RGB) ~(second RGB) :green)) ; tohle fungovat nebude, protoze ' neevaluju vnitrek listu
-;(def RGB `( ~(first RGB) ~(second RGB) :green)) ; quoting is reguired, because ' does not evaluate internals, OR list has to be used
-; (def RGB (list (first RGB) (second RGB) :green))
-(= (:red :green :blue) RGB)
+; Be aware that all dat are immutable! Use functions first and nth, or replace
+; (= '(:red :green :blue) (list ____) )
 
-; TODO basics structures
-; IF, FOR, WHILE
+

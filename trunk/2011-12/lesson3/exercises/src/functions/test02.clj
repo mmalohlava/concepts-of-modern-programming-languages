@@ -1,29 +1,38 @@
-(ns functions.test02)
+(ns functions.test01)
 
-(defn fce [f] 
-  (partial apply f)
+; =========================
+; === Clojure functions ===
+; =========================
+
+; ===============================
+
+; memoize
+(defn f [n] (reduce * (range 1 (inc n))))
+(def memo-f (memoize f))
+
+(println "without memoization")
+; Note the use of an underscore for the binding that isn't used.
+(dotimes [_ 3] (time (f 20)))
+
+(println "with memoization")
+(dotimes [_ 3] (time (memo-f 20)))
+
+; ===============================
+
+; tail recursion
+(def pow2 #(Math/pow 2 %))
+
+(defn sum-squares [initial-n] 
+  (loop [sum 0 n initial-n] ; <- recur target
+    (if (pos? n)
+      (recur (+ sum (pow2 n)) (dec n))
+      sum)  
+   )
 )
+(sum-squares 2)
+   
 
-
-(defn apply-fce [f & args]
-  (apply f (list args))
-)
-
-(apply-fce (fce +) 1 2 3)
-
-
-(defn myjuxt [& funcs]
-  (let [mapa-funkci (map fce funcs)] 
-    partial (fn [& args] (map #(apply % (list args)) mapa-funkci ))
-  )
- )
-
-
-( (myjuxt + * max min) 1 2 3)
-
-; ==== TESTS ====
-(= [21 6 1] ((myjuxt + max min) 2 3 5 1 6 4))
-(= ["HELLO" 5] ((myjuxt #(.toUpperCase %) count) "hello"))
-(= [2 6 4] ((myjuxt :a :c :b) {:a 2, :b 4, :c 6, :d 8 :e 10}))
-
-; TODO operators ->
+; ===============================
+; Assignment: write a function which recursively evaluate a polynom given by its coeficients
+; e.g, [a b c] represents ax^2 + bx + c, which can be evaulated as x*(ax + b) + c 
+(= (evaluate-poly [1 1 1] 3) 13)
