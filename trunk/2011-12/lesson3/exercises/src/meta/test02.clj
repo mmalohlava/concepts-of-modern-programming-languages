@@ -29,9 +29,7 @@
 (isa? java.util.Map String)
 (ancestors java.util.HashMap)
 
-; TODO: contextual eval - Joy of Clojure - p160
 
-(use '[clojure.xml :as xml])
-(xml/emit ::rect)
+
 
 

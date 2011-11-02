@@ -162,7 +162,10 @@
 (reduce get SIS-item [:teaching :lecture :sisid])
 
 ; ================
-; Assignment: write a function which finds indexes of elements satisfying given condition
+; Assignment: write a function which finds indexes of a given element
+(== '(5) (pos 3 [:a 1 :b 2 :c 3]))
+(== '(:c) (pos 3 {:a 1, :b 2, :c 3}))
+(== '(1 3 5) (pos 3 [:a 3 :b 3 :c 3]))
 
 
 
