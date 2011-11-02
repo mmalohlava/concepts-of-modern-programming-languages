@@ -1,6 +1,7 @@
 (ns hof.test02)
 
-; Assignment - implements a function myjuxt which implements function juxt
+; =================
+; Assignment - implement a function myjuxt which implements function juxt
 (clojure.repl/doc juxt)
 
 (= [21 6 1] ((myjuxt + max min) 2 3 5 1 6 4))
