@@ -1,5 +1,6 @@
 #summary Groovy introduction, collections, functional programming, meta-programming, DSLs.
 #labels Featured,Phase-Requirements
+#sidebar TOC
 
 = Lesson 1 details =
 
