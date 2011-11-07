@@ -1,5 +1,6 @@
 #summary Introduction of static meta-programming, DSLs in Clojure and Scala.
 #labels Featured,Phase-Requirements
+#sidebar TOC
 
 = Lesson 3 details =
 
