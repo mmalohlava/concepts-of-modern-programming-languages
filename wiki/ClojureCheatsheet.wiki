@@ -1,4 +1,5 @@
 #summary A short summary of Clojure tips, tricks and resources.
+#sidebar TOC
 
 = Introduction =
 
