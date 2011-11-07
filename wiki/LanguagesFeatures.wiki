@@ -1,4 +1,5 @@
 #summary Summary of language features presented during lectures.
+#sidebar TOC
 
 = Languages Features =
 
