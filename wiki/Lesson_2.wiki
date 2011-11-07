@@ -1,5 +1,6 @@
 #summary Introduction of static meta-programming, DSLs and various Groovy frameworks.
 #labels Featured,Phase-Requirements
+#sidebar TOC
 
 = Lesson 2 details =
 
