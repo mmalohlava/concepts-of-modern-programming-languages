@@ -1,5 +1,5 @@
 #summary The page contains various tips, tricks and Groovy-related resources shown during lectures.
-#sidebar TableOfContents
+#sidebar TOC
 
 = Introduction =
 
