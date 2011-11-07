@@ -1,4 +1,5 @@
 #summary A list of various resources involving code katas.
+#sidebar TOC
 
 = What is code kata? =
 Code Katas were originally created by Dave Thomas of the Pragmatic Programmers as small exercises/problems to solve
