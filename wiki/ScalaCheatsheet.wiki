@@ -1,4 +1,5 @@
 #summary The page provides various tips, tricks and Scala-related resources.
+#sidebar TOC
 
 = Introduction =
 
