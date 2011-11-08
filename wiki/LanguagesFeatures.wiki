@@ -16,4 +16,4 @@
 || *eval*                    || YES via `GroovyScript`  || YES                  || ---     || ---      ||
 || *code as data*            || NO                      || YES                  || ---     || ---      ||
 || *infinite data structures*|| NO                      || YES via sequences    || ---     || ---      ||
-|| *monads*                  || ---                     || ---                  || ---     || ---      ||
+|| *[http://en.wikipedia.org/wiki/Monad_%28functional_programming%29 monads]*   || ---                     || ---                  || ---     || ---      ||
