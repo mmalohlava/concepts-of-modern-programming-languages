@@ -1,6 +1,6 @@
 #summary Table of Content
 
- * Lectures
+ * [LectureOverview Lectures]
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_1 Lesson 1] - Groovy
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_2 Lesson 2] - Groovy
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_3 Lesson 3] - Clojure
