@@ -3,18 +3,18 @@
 
 = Languages Features =
 
-||                           || *Groovy*                || *Clojure*            || *Scala* || *Erlang* ||
-|| *first class functions*   || YES                     || YES                  || ---     || ---      ||
-|| *extensible compiler*     || YES via                 || YES via macros       || ---     || ---      ||
-|| *AST transformation*      || YES                     || YES via macros       || ---     || ---      ||
-|| *memoize*                 || YES                     || YES                  || ---     || ---      ||
-|| *dynamic dispatch*        || YES                     || YES via multi methods|| ---     || ---      ||
-|| *functional programming*  || YES                     || YES                  || ---     || ---      ||
-|| *macros*                  || NO                      || YES                  || ---     || ---      ||
-|| *multi methods*           || YES via `missingMethod` || YES                  || ---     || ---      ||
-|| *optional hierarchies*    || NO                      || YES                  || ---     || ---      ||
-|| *eval*                    || YES via `GroovyScript`  || YES                  || ---     || ---      ||
-|| *code as data*            || NO                      || YES                  || ---     || ---      ||
-|| *infinite data structures*|| NO                      || YES via sequences    || ---     || ---      ||
-|| *[http://en.wikipedia.org/wiki/Continuation continuations]*                  ||
+||                                                                              || *Groovy*                || *Clojure*            || *Scala* || *Erlang* ||
+|| *first class functions*                                                      || YES                     || YES                  || ---     || ---      ||
+|| *extensible compiler*                                                        || YES via                 || YES via macros       || ---     || ---      ||
+|| *AST transformation*                                                         || YES                     || YES via macros       || ---     || ---      ||
+|| *memoize*                                                                    || YES                     || YES                  || ---     || ---      ||
+|| *dynamic dispatch*                                                           || YES                     || YES via multi methods|| ---     || ---      ||
+|| *functional programming*                                                     || YES                     || YES                  || ---     || ---      ||
+|| *macros*                                                                     || NO                      || YES                  || ---     || ---      ||
+|| *multi methods*                                                              || YES via `missingMethod` || YES                  || ---     || ---      ||
+|| *optional hierarchies*                                                       || NO                      || YES                  || ---     || ---      ||
+|| *eval*                                                                       || YES via `GroovyScript`  || YES                  || ---     || ---      ||
+|| *code as data*                                                               || NO                      || YES                  || ---     || ---      ||
+|| *infinite data structures*                                                   || NO                      || YES via sequences    || ---     || ---      ||
+|| *[http://en.wikipedia.org/wiki/Continuation continuations]*                  || ---                     || ---                  || ---     || ---      ||
 || *[http://en.wikipedia.org/wiki/Monad_%28functional_programming%29 monads]*   || ---                     || ---                  || ---     || ---      ||
