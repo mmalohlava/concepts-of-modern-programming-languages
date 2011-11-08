@@ -16,3 +16,4 @@
 || *eval*                    || YES via `GroovyScript`  || YES                  || ---     ||
 || *code as data*            || NO                      || YES                  || ---     ||
 || *infinite data structures*|| NO                      || YES via sequences    || ---     ||
+|| *monads*                  || ---                     || ---                  || ---     ||
