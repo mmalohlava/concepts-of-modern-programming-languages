@@ -7,6 +7,7 @@
 || *first class functions*                                                      || YES                     || YES                  || YES     || ---      ||
 || *partial functions*                                                          || YES                     || YES                  || YES     || ---      ||
 || *closures*                                                                   || YES                     || YES                  || YES     || ---      ||
+|| *tail-recursion*                                                             || YES                     || YES via `rec`        || YES     || ---      ||
 || *extensible compiler*                                                        || YES via                 || YES via macros       || ---     || ---      ||
 || *AST transformation*                                                         || YES                     || YES via macros       || ---     || ---      ||
 || *memoize*                                                                    || YES                     || YES                  || ---     || ---      ||
