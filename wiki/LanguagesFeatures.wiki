@@ -5,6 +5,8 @@
 
 ||                                                                              || *Groovy*                || *Clojure*            || *Scala* || *Erlang* ||
 || *first class functions*                                                      || YES                     || YES                  || ---     || ---      ||
+|| *partial functions*                                                          || YES                     || YES                  || YES     || ---      ||
+|| *closures*                                                                   || YES                     || YES                  || YES     || ---      ||
 || *extensible compiler*                                                        || YES via                 || YES via macros       || ---     || ---      ||
 || *AST transformation*                                                         || YES                     || YES via macros       || ---     || ---      ||
 || *memoize*                                                                    || YES                     || YES                  || ---     || ---      ||
