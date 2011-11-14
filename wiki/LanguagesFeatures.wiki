@@ -4,7 +4,7 @@
 = Languages Features =
 
 ||                                                                              || *Groovy*                || *Clojure*            || *Scala* || *Erlang* ||
-|| *first class functions*                                                      || YES                     || YES                  || ---     || ---      ||
+|| *first class functions*                                                      || YES                     || YES                  || YES     || ---      ||
 || *partial functions*                                                          || YES                     || YES                  || YES     || ---      ||
 || *closures*                                                                   || YES                     || YES                  || YES     || ---      ||
 || *extensible compiler*                                                        || YES via                 || YES via macros       || ---     || ---      ||
