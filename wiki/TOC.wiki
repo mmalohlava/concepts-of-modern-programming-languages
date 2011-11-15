@@ -9,7 +9,7 @@
    * [GroovyCheatsheet Groovy]
    * [ClojureCheatsheet Clojure]
    * [ScalaCheatsheet Scala]
-   * [JSCheatsheet Scala]
+   * [JSCheatsheet JavaScript]
  * [CodeKatas Code Katas]
  * Languages features
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/LanguagesFeatures Summary of features]
