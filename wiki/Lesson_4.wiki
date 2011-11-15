@@ -26,7 +26,10 @@
     * implicit parameters
   * Parsers
   * Tests 
-  * Lift
+  * Scala eco-system
+    * Lift
+    * Sbt
+
 
 
 <wiki:comment>
@@ -112,4 +115,3 @@ The source code of the homework is located at [http://code.google.com/p/concepts
 == Recommended reading ==
  * Type inference http://dysphoria.net/2009/06/28/hindley-milner-type-inference-in-scala/
  * Scala ecosystem https://wiki.scala-lang.org/display/SW/Tools+and+Libraries
-
