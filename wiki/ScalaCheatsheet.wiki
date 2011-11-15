@@ -6,6 +6,8 @@
 = Basics =
 
 = IDE =
+Emacs, ViM
+http://code.google.com/p/scala-edit/
 
 = Links =
  * _Scala_ - http://www.scala-lang.org/

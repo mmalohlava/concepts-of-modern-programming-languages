@@ -1,0 +1,115 @@
+#summary Introduction of static meta-programming, DSLs in Scala.
+#labels Featured,Phase-Requirements
+#sidebar TOC
+
+= Lesson 4 details =
+
+== Agenda ==
+
+  * Basics introduction
+    * Scala syntax
+      * elasticity
+      * type inferring
+    * operators
+    * functions and closures
+    * OOP
+      * global objects - companion objects - singleton
+  * Case classes and pattern matching
+  * XML processing
+  * Type parameters and variance
+  * Modules 
+    * self reference
+    * views
+  * DSLs
+    * implicit conversions
+    * implicit objects 
+    * implicit parameters
+  * Parsers
+  * Tests 
+  * Lift
+
+
+<wiki:comment>
+  
+  * operators - global operators concept
+    * TODO example na unarni operator via method unary_- 
+    * Assignment: write implementation for: assert(bills !*&^%~ code! === (bills.!*&^%~(code)).!())
+
+
+ Scala on Heroku http://devcenter.heroku.com/articles/scaling-out-with-scala-and-akka
+ 
+ local scala = https://github.com/harrah/xsbt/wiki/Local-Scala
+
+ Kiama - library for DSL parsing http://code.google.com/p/kiama/w/list
+
+ external DSL - http://debasishg.blogspot.com/2008/04/external-dsls-made-easy-with-scala.html
+
+code examples - http://www.cs.helsinki.fi/u/wikla/OTS/Sisalto/examples/index.html
+
+Node-JS book: http://www.nodebeginner.org/
+
+Stress:
+  - immutability
+  - muttable state, concurrency
+  - simplicyt 
+    - everything is translated into java code, e.g., operators are objects methods
+
+  - Static typing
+  - object Predef (Console, assert,...)
+
+Notes:
+ * public is default visibility
+ * everything is a function call (somehow hidden in syntax)
+ * support for symbols via val a = 'asymbol <=> a = new Symbol("a");
+ * method used as an operator - e.g., a.indexOf('s') (method), a indexOf 's' (operator)
+ * -2 <=> (2).unary_- TODO example na unarni operator (pozor, allowed prefix operators are +-!~
+  * postfix operators = functions without arguments ( the dot is not needed in the call: s toLowecase
+ * == compare values (in Java compare values for primitive types, references for reference types)a
+ * methods nesting (method inside method)a
+ * first-class functions compiled into a trait Function0, Function1, ... acording to a function number parameters - then it contains an apply method with the given number of parameters
+ * curly braces in function call works only for functions with one parameter
+ * traits
+   - extends means the target of mixin
+   - trait can call super.put(2*x) (abstract override)
+   - more mixins are evaluated from right to left
+   TODO: lineralization of multiple traits
+ * imports of methods parameters - p238
+
+TODO: extending type for given operator, e.g. 4 * "abc" or "0xf000" * "0xf000"
+TODO: migration tool - generate sbt project, generate eclipse project
+TODO: jaky je vyznam operator <- ?
+TODO: zminit type inferring - 
+TODO: kuknout se na clanky o Scale
+
+
+SLides
+ - scala IDE
+ - scala ecosystem
+</wiki:comment>
+
+
+== Preparation ==
+ * Checkout the recent state of our project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
+ * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
+ * Install _Eclipse_ from http://www.eclipse.org/downloads/ - choose version called *Eclipse IDE for Java Developers* 
+ * Install _Scala IDE_ for Eclipse:
+   * in running instance of Eclipse choose _Help > Install new software_
+   * in dialog put the address of Scala IDE update side : `http://download.scala-ide.org/releases-29/stable/site` (via http://download.scala-ide.org/)
+   * install all provided plugins 
+   * restart the Eclipse - you should see _Scala Perspective_ in the menu _Window > Open Perspective > Other..._
+   * check documentation http://www.assembla.com/spaces/scala-ide/wiki/Getting_Started
+ * Install _Sbt_ tool from https://github.com/harrah/xsbt/wiki/Getting-Started-Setup
+   * create script `sbt` according to description in https://github.com/harrah/xsbt/wiki/Getting-Started-Setup
+   * run `sbt` to download all necessary dependencies
+
+== Homework ==
+
+_TBA_
+<wiki:comment>
+The source code of the homework is located at [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/trunk/2011-12/lesson4444mework/conversion.clj SVN].
+</wiki:comment>
+
+== Recommended reading ==
+ * Type inference http://dysphoria.net/2009/06/28/hindley-milner-type-inference-in-scala/
+ * Scala ecosystem https://wiki.scala-lang.org/display/SW/Tools+and+Libraries
+

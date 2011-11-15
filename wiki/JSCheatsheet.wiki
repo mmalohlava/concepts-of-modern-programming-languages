@@ -1,0 +1,5 @@
+Cloud9 online editor + IDE + node-js
+
+http://blog.mongohq.com/blog/2011/10/23/introduction_to_cloud9_and_mongodb/
+
+Node-JS book: http://www.nodebeginner.org/
