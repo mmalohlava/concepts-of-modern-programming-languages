@@ -12,9 +12,16 @@ class TestSuiteDSL extends FunSuite {
      (50-->cm) + (50-->cm) 
     }  
     
-    assert(((1-->mm + (3-->m)) to m) === (3.001-->m))  
-	
-  } 
+    assert(((1-->mm + (3-->m)) to m) === (3.001-->m))
+  }
+  
+  test("assignment distance DSL - extended") {
+    // local import
+    import distanceDSL._;
+    
+//    assert(((1{mm} + 3{m}) to m) === (3.001{m}))
+    pending
+  }
   
 }
 
@@ -54,7 +61,7 @@ object distanceDSL {
 	}
 	
 	class DistanceValueWrapper(val value: Double) {
-	  def -->(unit: DistanceUnit): DistanceValue = new DistanceValue(value, unit);	 
+	  def -->(unit: DistanceUnit): DistanceValue = new DistanceValue(value, unit);
 	}
 	
 	

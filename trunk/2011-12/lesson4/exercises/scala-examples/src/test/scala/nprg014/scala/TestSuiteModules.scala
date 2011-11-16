@@ -60,6 +60,7 @@ class TestSuiteModules extends FunSuite {
   object Attempt02 {
     abstract class Meal (val name: String)
     
+    // NOTE: first try with T <: Meal => Pizza implicit conversion is required
     abstract class Service[T <% Meal, MENU[_] <: Menu[_,_]] { //NOTE: <% means view-bound, <: means subtype, Menu subtype is not necessary in this example
       val menu : MENU[T] // NOTE: in fact type constructor
       
