@@ -4,7 +4,7 @@ import org.scalatest.FunSuite
 
 class TestSuiteDSL extends FunSuite {
   
-  test("distance-dsl") {
+  test("distance DSL") {
     // local import
     import distanceDSL._;
     
@@ -13,9 +13,9 @@ class TestSuiteDSL extends FunSuite {
     }  
     
     assert(((1-->mm + (3-->m)) to m) === (3.001-->m))  
-	  
-  }  
-
+	
+  } 
+  
 }
 
 
@@ -24,11 +24,12 @@ object distanceDSL {
 	
 	class DistanceUnit(val name:String, val factorToMM:Long) 
 	
-	final object mm extends DistanceUnit("mm", 1)
-	final object cm extends DistanceUnit("cm", 10)
-	final object m extends DistanceUnit("m", 1000)
-	final object km extends DistanceUnit("km", 1000000L)
+	object mm extends DistanceUnit("mm", 1)
+	object cm extends DistanceUnit("cm", 10)
+	object m extends DistanceUnit("m", 1000)
+	object km extends DistanceUnit("km", 1000000L)
 	
+	/* Immutable structure */
 	class DistanceValue(val value : Double, val unit: DistanceUnit) {
 	  val valueInMM = value * unit.factorToMM;
 	      
@@ -53,7 +54,7 @@ object distanceDSL {
 	}
 	
 	class DistanceValueWrapper(val value: Double) {
-	  def -->(unit: DistanceUnit): DistanceValue = new DistanceValue(value, unit);	  
+	  def -->(unit: DistanceUnit): DistanceValue = new DistanceValue(value, unit);	 
 	}
 	
 	
