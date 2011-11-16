@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id$ -->
+
+<project name="common-tasks" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+
+    <!-- Setup common build properties -->
+    <dirname property="imported.basedir" file="${ant.file.common-tasks}"/>
+    <!-- Setup common ivy settings -->
+    <property file="${imported.basedir}/common-ivy.properties"/>
+    <!-- Setup this build properties-->
+    <property file="${imported.basedir}/common.properties"/>
+    
+    <!-- Setup ivy default configuration with some custom info -->
+    <property name="ivy.settings.dir" value="${imported.basedir}/../ivy-settings"/>
+    <ivy:settings file="${ivy.settings.dir}/${ivy.settings.filename}" />
+
+    <!-- Configure paths -->
+    <!-- All jars in lib and externals folders -->
+    <path id="lib.path.id">
+        <fileset dir="${lib.dir}" erroronmissingdir="false"/>
+    </path>
+
+    <path id="src.path.id">
+        <pathelement location="${src.dir}" />
+        <pathelement location="${src.generated.dir}" />
+    </path>
+
+    <!-- ================================== -->
+	<!-- ========  INITIALIZATION   ======= -->
+	<!-- ================================== -->
+    <target name="init" depends="build-banner,ivy-resolve, init-taskdef">
+        <!-- prepare property TODAY -->
+		<tstamp />
+    </target>
+
+    <target name="build-banner">
+        <echo>
+            ============== BUILDING PRODUCT ==============
+            == Product name: ${product.name}
+            == Product id: ${product.id}
+            == Product.version: ${product.version}:${version}
+            ==============================================
+        </echo>
+    </target>
+
+	<!-- Utility tasks used in the build process -->
+    <target name="init-taskdef" />
+
+    <!-- =================================== -->
+	<!-- ==========    COMPILE    ========== -->
+    <!-- =================================== -->
+    <target name="compile" depends="init" description="--> compile the project">
+        <antcall target="init-compile" />
+        <antcall target="pre-compile" />
+        <antcall target="intr-compile" />
+        <antcall target="post-compile" />
+    </target>
+
+    <target name="init-compile" >
+        <mkdir dir="${out.build.dir}" />
+        <mkdir dir="${out.build.resources.dir}" />
+        <mkdir dir="${src.generated.dir}" />
+    </target>
+
+    <target name="pre-compile" />
+
+    <target name="intr-compile">
+        <javac 
+            debug="${javac.debug}"
+            source="${javac.source}"
+            deprecation="${javac.deprecation}"
+            destdir="${out.build.dir}" >
+            <src refid="src.path.id" />
+            <classpath refid="lib.path.id" />
+        </javac>
+        
+        <!-- Copy resources to be included also in classpath -->
+		<copy todir="${out.build.dir}">
+			<fileset dir="${src.dir}" erroronmissingdir="false">
+				<exclude name="**/*.java" />
+				<exclude name="**/.svn" />
+				<exclude name="**/*.swp" />
+			</fileset>
+        </copy>
+
+        <copy todir="${out.build.dir}">
+			<fileset dir="${src.generated.dir}" erroronmissingdir="false">
+				<exclude name="**/*.java" />
+				<exclude name="**/.svn" />
+				<exclude name="**/*.swp" />
+			</fileset>
+        </copy>
+
+        <copy todir="${out.build.resources.dir}">
+			<fileset dir="${resources.dir}" erroronmissingdir="false" />
+        </copy>
+
+    </target>
+    
+    <!-- Utility tasks provided to allow manage post compilation in user defined build files -->
+    <target name="post-compile" >
+        <echo message="Empty post-compile action " />
+    </target>
+
+    <!-- =================================== -->
+	<!-- ==========   DIST   ========== -->
+	<!-- =================================== -->
+	
+	<condition property="publish.shared">
+		<equals arg1="${publish}" arg2="shared" casesensitive="false"/>
+	</condition>
+	
+	<condition property="publish.public">
+		<equals arg1="${publish}" arg2="public" casesensitive="false"/>
+	</condition>
+	
+	<condition property="publish.local">
+		<or>
+			<equals arg1="${publish}" arg2="local" casesensitive="false"/>
+			<and>
+				<isfalse value="${publish.shared}"/>
+				<isfalse value="${publish.public}"/>
+			</and>
+		</or>
+	</condition>
+    
+    <target name="dist" 
+        depends="ivy-publish-local,ivy-publish-shared,ivy-publish-public" 
+        description="--> prepare ivy distribution of the project and publish it in local repository">
+    </target>
+
+    <!-- =================================== -->
+	<!-- ==========      JAR      ========== -->
+    <!-- =================================== -->
+
+    <target name="jar" 
+        description="--> make a jar file for this project"
+        depends="init-jar,pre-jar,intr-jar,post-jar">
+    </target>
+
+    <target name="init-jar">
+        <mkdir dir="${out.jar.dir}" />
+    </target>
+    
+    <target name="pre-jar">
+    </target>
+
+    <target name="intr-jar" depends="ivy-version, compile" >
+        <!-- setup classpath for jar -->
+        <pathconvert property="all.classpath.for.manifest" refid="lib.path.id" pathsep=" ">
+            <chainedmapper>
+                <flattenmapper />
+                <!-- <globmapper from="*.jar" to="externals${file.separator}*.jar" casesensitive="no" /> -->
+            </chainedmapper>
+		</pathconvert>
+
+        <jar destfile="${out.jar.dir}/${product.jar.filename}">
+            <fileset dir="${out.build.dir}" />
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Build-Version" value="${version}" />
+				<attribute name="Class-Path" value="${all.classpath.for.manifest}" />
+            </manifest>
+        </jar>
+    </target>
+    
+    <target name="post-jar" />
+
+	<!-- =================================== -->
+	<!-- ==========      JDOC     ========== -->
+    <!-- =================================== -->
+    <target name="jdoc" description="--> generate project javadoc">
+        <antcall target="init-jdoc" />
+        <antcall target="pre-jdoc" />
+        <antcall target="intr-jdoc" />
+        <antcall target="post-jdoc" />
+    </target>
+
+    <target name="init-jdoc">
+		<mkdir dir="${out.jdoc.dir}" />
+    </target>
+    
+    <target name="pre-jdoc" />
+
+    <target name="intr-jdoc" depends="compile">
+        <javadoc 
+            packagenames="${product.packages}" 
+            destdir="${out.jdoc.dir}" 
+            windowtitle="${product.name} Documentation" 
+            doctitle="${product.name} Documentation" 
+            use="true" private="false" author="false">
+            <sourcepath refid="src.path.id" />
+			<classpath refid="lib.path.id" />
+			<!--<link href="http://java.sun.com/javase/6/docs/api/"/> -->
+			<tag name="generated" scope="all" description="Generated from the meta-model" />
+			<tag name="ordered" scope="all" description="Ordered (meta-model)" />
+			<tag name="model" scope="all" description="Part of the meta-model" />
+			<tag name="handwritten" scope="all" description="Modified by hand" />
+		</javadoc>
+    </target>
+
+    <target name="post-jdoc" />
+
+    <!-- ======================================================================== -->
+    <!-- ======================================================================== -->
+    
+    <!-- =================================== -->
+	<!-- ==========      IVY      ========== -->
+	<!-- =================================== -->
+    	
+    <!-- ================================= -->
+    <!--  target: ivy-resolve              -->
+    <!-- ================================= -->
+    <target name="ivy-resolve" depends="clean-lib" description="--> resolve and retrieve dependencies with ivy">
+        <mkdir dir="${lib.dir}"/> <!-- not usually necessary, ivy creates the directory IF there are dependencies -->
+    	<ivy:retrieve pattern="${lib.dir}/[organisation]-[artifact]-[revision].[ext]" />
+    </target>
+    
+    <!-- ================================= 
+          target: ivy-report              
+         ================================= -->
+    <target name="ivy-report" depends="ivy-resolve" description="--> generates a report of dependencies">
+        <ivy:report todir="${out.build.dir}"/>
+    </target>
+    
+    <target name="ivy-new-version" unless="ivy.new.revision">
+    	<!-- default module version prefix value -->
+		<property name="module.version.prefix" value="${product.version}-dev-b" />
+		
+    	<!-- asks to ivy an available version number -->
+		<ivy:info file="${ivy.file}" />
+    	<ivy:buildnumber 
+    		organisation="${ivy.organisation}" module="${ivy.module}" 
+    		revision="${module.version.prefix}" defaultBuildNumber="1" revSep=""/>
+	</target>
+
+    <target name="ivy-version" depends="ivy-new-version">
+    	<!-- create version file in classpath for later inclusion in jar -->
+    	<mkdir dir="${out.build.dir}"/>
+		<echo message="version=${ivy.new.revision}" file="${out.build.dir}/${ant.project.name}.properties" append="false" />
+
+		<!-- load generated version properties file -->
+        <property file="${out.build.dir}/${ant.project.name}.properties" />
+    </target>
+
+    <!-- ================================= 
+          target: publish INTEGRATION
+         ================================= -->
+    <target name="ivy-publish-shared" depends="clean-build, jar" if="publish.shared"
+    	description="--> publish this project to INTEGRATION ivy repository ">
+        <ivy:info file="${ivy.file}" />
+    	<ivy:publish artifactspattern="${out.jar.dir}/[artifact].[ext]" 
+    			           resolver="shared-publish"
+    			           pubrevision="${version}" 
+    			           status="milestone"
+                           forcedeliver="true"
+    	/>
+        <echo message="project ${ant.project.name} released into MILESTONES repository with version ${version} into" />
+    </target>
+
+    <!-- ================================= 
+          target: publish STABLE (RELEASE)
+         ================================= -->
+    <target name="ivy-publish-public" depends="clean-build, jar" if="publish.public"
+    	description="--> publish this project in the STABLE ivy repository">
+        <ivy:info file="${ivy.file}" />
+    	<ivy:publish artifactspattern="${out.jar.dir}/[artifact].[ext]" 
+    			           resolver="public-publish"
+    			           pubrevision="${product.version}" 
+    			           status="release"
+                           forcedeliver="true"
+    	/>
+        <echo message="project ${ant.project.name} released into STABLE repository with version ${product.version}" />
+    </target>
+
+    <!-- ================================= 
+          target: publish LOCAL              
+         ================================= -->
+    <target name="ivy-publish-local" depends="local-version, jar" if="publish.local"
+    	description="--> publish this project in the LOCAL ivy repository">
+        <ivy:info file="${ivy.file}" />
+        <ivy:publish artifactspattern="${out.jar.dir}/[artifact].[ext]" 
+    			        resolver="local"
+    			        pubrevision="${version}"
+				        pubdate="${now}"
+    			        status="integration"
+                        forcedeliver="true"
+                        overwrite="true"
+    	/>
+        <echo message="project ${ant.project.name} published locally with version ${version}" />
+    </target>
+
+    <target name="local-version">
+		<tstamp>
+			<format property="now" pattern="yyyyMMddHHmmss"/>
+		</tstamp>
+        <property name="ivy.new.revision" value="${product.version}-local-${now}"/>
+    </target>
+
+    <!-- =================================== -->
+	<!-- ==========     CLEAN     ========== -->
+	<!-- =================================== -->
+
+
+	<!-- ================================= 
+          target: clean-local              
+         ================================= -->
+	<target name="clean-local" 
+		description="--> cleans the local repository for the current module">
+        <ivy:info file="${ivy.file}" />
+	    <delete dir="${ivy.local.default.root}/${ivy.module}" />
+	</target>
+
+	<!-- ================================= 
+          target: clean-lib              
+         ================================= -->
+    <target name="clean-lib" description="--> clean the project libraries directory (dependencies)">
+        <delete includeemptydirs="true" dir="${lib.dir}"/>
+    </target>
+
+	<!-- ================================= 
+          target: clean-jar              
+         ================================= -->
+    <target name="clean-jar" description="--> clean the project libraries directory (builder jars)">
+        <delete includeemptydirs="true" dir="${out.jar.dir}"/>
+    </target>
+
+
+    <!-- ================================= 
+          target: clean-build              
+         ================================= -->
+    <target name="clean-build" description="--> clean the project built files">
+        <delete includeemptydirs="true" dir="${out.build.dir}"/>
+    </target>
+
+    <!-- ================================= 
+          target: clean-dist
+         ================================= -->
+    <target name="clean-dist" description="--> clean the project dist files">
+        <delete includeemptydirs="true" dir="${out.dist.dir}"/>
+    </target>
+    
+    <!-- ================================= 
+          target: clean-out             
+         ================================= -->
+    <target name="clean-out" description="--> clean the project built and dist files">
+        <delete includeemptydirs="true" dir="${out.dir}"/>
+    </target>
+
+
+    <!-- ================================= 
+          target: clean              
+         ================================= -->
+    <target name="clean" depends="clean-out, clean-lib" description="--> clean the project" />
+    
+	<!-- =================================== -->
+	<!-- ==========      ZIP      ========== -->
+    <!-- =================================== -->
+
+    <target name="init-zip">
+		<mkdir dir="${out.zip.dir}" />
+    </target>
+
+    <target name="zip-src" depends="init-zip" description="--> create a zip file containing the sources of ${product.name}">
+		<zip destfile="${out.zip}/${product.id}-${product.version}-${TODAY}-src.zip" basedir="${basedir}" excludes="output **/.svn" />
+	</target>
+
+    <target name="zip-bin" depends="init-zip,jar,jdoc" description="--> create a zip file containing the jars and javadoc of ${product.name}">
+		<zip destfile="${out.zip}/${product.id}-${product.version}-${TODAY}-bin.zip" basedir="${out.dist}" excludes="**/.svn" />
+	</target>
+
+    <target name="zip-dist" depends="init-zip,dist" description="--> create zip file with the complete binary distribution of ${product.zip}">
+		<zip destfile="${out.zip}/${product.id}-${product.version}.zip" basedir="${out.dist}" />
+		<echo message="SOFA2 distribution file: ${out.zip}/${product.id}-${product.version}.zip" />
+		<!--<tar destfile="${out.zip}/${product.id}-${product.version}.tgz" basedir="${out.dist}" compression="gzip"/> -->
+	</target>
+
+</project>
