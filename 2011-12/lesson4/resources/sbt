@@ -1,0 +1,6 @@
+#!/bin/bash
+#java -Xmx512M -jar `dirname $0`/sbt-launch.jar @sbt.boot.properties "$@"
+java -Xmx512M -jar `dirname $0`/sbt-launch.jar "$@"
+
+
+# vi: 

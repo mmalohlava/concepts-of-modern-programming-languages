@@ -1,0 +1,8 @@
+Scala Edit 0.3.4
+==================
+
+ScalaEdit IDE can be downloaded from
+http://code.google.com/p/scala-edit/downloads/list
+
+Notice! Run ScalaEdit IDE with internet connection available to download all
+necessary resources!
