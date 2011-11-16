@@ -12,11 +12,20 @@ class TestSuiteBasics extends FunSuite {
   }
 
   test("note #2: == compare values (not references as in Java)") {
+    val numA : Int = 1;
+    val numB : Int = 1;
+    
+    assert(numA === numB)
+    
+    val listA = List("a", 1 , 'x)
+    val listB = List("a", 1 , 'x)
+    
+    assert(listA === listB)
   }
 
   test("note #3: the function call (function definition inside a function) ") {
     def func1(x: Int) = x
-    def func2(x: Int) = { x } // NOTE: the last expression express return value
+    def func2(x: Int) = { x } // NOTE: the last expression express return value, the return type is inferred
     def func3(x: Int): Int = { return x }
     def proc(x: Int) { val a = 1 } // NOTE: the procedure style 
 
@@ -48,7 +57,7 @@ class TestSuiteBasics extends FunSuite {
   }
 
   test("note #6: prefix operators are special methods (only +-!~ are allowed to be used as postfix operator)") {
-    val num = +2
+    val num = 2
 
     assert(+num === (num).unary_+)
   }
@@ -73,6 +82,7 @@ class TestSuiteBasics extends FunSuite {
       case s: String => assert(s.isInstanceOf[String])
       case n: Int => assert(n.isInstanceOf[Int])
       case b: Boolean => assert(b.isInstanceOf[Boolean])
+      case _ => assert(false)
     }
 
     val tuple = ("John", "Wayn")
@@ -90,7 +100,7 @@ class TestSuiteBasics extends FunSuite {
   
   class Person(val name: String, val surname: String, profession: String) {
     
-      private val fullName: String = name + " " + surname;
+      private val fullName: String = name + " " + surname; // NOTE: default visibility is public
 
       // another constructor
       def this(name: String) {
@@ -114,20 +124,19 @@ class TestSuiteBasics extends FunSuite {
       //      def fullName = "Fullname is " + internalPerson.fullName;     
   }
   
-  test("note #9: it is still like Java+C#+Groovy BUT...") {
+  test("note #9: Scala is like Java+C#+Groovy BUT...") {
     val john = new Person("John", "Malkovitch", "actor");
     
     assert(john.toString() === "John Malkovitch");
-    assert(john.name === "John");    
-    
+    assert(john.name === "John");        
   }
 
   /* Assignment: write the code which will satisfy the test */
   test("assignment: operators") {
     val code = '*';
-
+    
     // val bills = ?YOUR ASSIGNMENT"
-    //    assert(bills !*&^%~ code! === 42)
+    // assert((bills !*&^%~ code!) === 42)
     pending
   }
 

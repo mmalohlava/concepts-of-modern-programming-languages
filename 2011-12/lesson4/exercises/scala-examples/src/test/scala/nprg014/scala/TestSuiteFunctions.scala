@@ -118,8 +118,8 @@ class TestSuiteFunctions extends FunSuite {
   test("note #8 - the functions are passed as instances implementin FunctionX trait ") {
     val customAssertEnabled = false
     
-    def boolAssert(cond: Boolean) = if (customAssertEnabled && !cond) throw new AssertionError 
-    def myAssert(cond: => Boolean) = if (customAssertEnabled && !cond) throw new AssertionError
+    def boolAssert(cond: Boolean) = if (customAssertEnabled && !cond) throw new AssertionError // passing by name 
+    def myAssert(cond: => Boolean) = if (customAssertEnabled && !cond) throw new AssertionError // passing by value
     
     // NOTE: custom assertion is disabled
     intercept[ArithmeticException] {
@@ -128,7 +128,7 @@ class TestSuiteFunctions extends FunSuite {
     myAssert( 10 / 0 == 0) // NOTE: the condition is evaluated inside method call via creation a function with body => Boolean, and call its apply method and the place of using the condition    
   }
   
-  test("note #8 - function as parameter") {
+  test("note #9 - function as parameter") {
     
     def tester(name:String, desc:String*)(f: =>Unit) { 
       println("Test " + name);

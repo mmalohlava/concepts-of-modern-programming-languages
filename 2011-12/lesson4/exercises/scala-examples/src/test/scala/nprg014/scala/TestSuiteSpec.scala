@@ -38,17 +38,13 @@ class TestSuiteSpec extends FeatureSpec with GivenWhenThen {
     scenario("pop is invoked on an empty stack") {
        
       given("an empty stack")
-      val emptyStack = new Stack[String]
-
+    
       when("when pop is invoked on the stack")
       then("NoSuchElementException should be thrown")
-      intercept[NoSuchElementException] {
-        emptyStack.pop()
-      }
-
+    
       and("the stack should still be empty")
-      assert(emptyStack.isEmpty)
-//      pending
+    
+      pending
     }
   }
 }
