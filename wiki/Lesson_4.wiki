@@ -158,7 +158,7 @@ The task is to explore deployment of Scala applications into [http://www.heroku.
 
 The objective of the task is to write a simple web application showing the last 10 messages from Twitter timeline for a given username. The application should permit user to enter a Twitter username. After clicking on submit button, the application should show 10 newest messages from the timeline corresponding to the given user.
 
-_Note_:  To get a Twitter timeline see documentation of the REST method `user_timeline` https://dev.twitter.com/docs/api/1/get/statuses/user_timeline .
+_Note_:  To get a Twitter timeline see documentation of the REST method `user_timeline` https://dev.twitter.com/docs/api/1/get/statuses/user_timeline or you can user any Java/Scala Twitter library - see https://dev.twitter.com/docs/twitter-libraries.
 
 == Recommended reading ==
  * Type inference http://dysphoria.net/2009/06/28/hindley-milner-type-inference-in-scala/
