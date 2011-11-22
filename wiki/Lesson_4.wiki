@@ -107,7 +107,7 @@ SLides
 
 == Homework ==
 
-For this time, you have two option to choose - the first option contains a programming task, the second option for homework is more explorative.
+For this time, you have two options to choose - the first option contains a programming task, the second option for homework is more explorative.
  
 
 === Option #1 ===
