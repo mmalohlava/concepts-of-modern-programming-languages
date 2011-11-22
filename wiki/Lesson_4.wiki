@@ -120,6 +120,9 @@ For example:
 
 > diceRoller("3d6")
 11
+
+> diceRoller("3d6")
+19
 }}}
 
 Grammar for dice expression defined via BNF:
