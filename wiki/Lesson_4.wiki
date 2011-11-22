@@ -147,6 +147,8 @@ Grammar for dice expression defined via BNF:
    + - lowest
 }}}
 
+_Note_: For the solution you can use an expression parser or you can define your own DSL (then you will need to modify expressions written above).
+
 <wiki:comment>
 The source code of the homework is located at [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/trunk/2011-12/lesson_4/homework/dice-roller.scala SVN].
 </wiki:comment>
