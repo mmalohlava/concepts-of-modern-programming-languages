@@ -154,9 +154,11 @@ The source code of the homework is located at [http://code.google.com/p/concepts
 </wiki:comment>
 
 === Option #2 ===
-The task is to explore deployment of Scala applications into [http://www.heroku.com/ Heroku] cloud platform. The starting point for this task is the article http://devcenter.heroku.com/articles/scala and Finagle web library https://github.com/twitter/finagle.
+The task is to explore deployment of Scala applications into [http://www.heroku.com/ Heroku] cloud platform. The starting point for this task is the article http://devcenter.heroku.com/articles/scala and Finagle web library https://github.com/twitter/finagle and .
 
-The objective of the task is to write a simple web application showing the last 10 messages from twitter timeline for a given username. The application should permit user to enter a twitter username. After clicking on submit button, the application should show 10 newest messages from the timeline corresponding to the given user.
+The objective of the task is to write a simple web application showing the last 10 messages from Twitter timeline for a given username. The application should permit user to enter a Twitter username. After clicking on submit button, the application should show 10 newest messages from the timeline corresponding to the given user.
+
+_Note_:  To get a Twitter timeline see documentation of the REST method `user_timeline` https://dev.twitter.com/docs/api/1/get/statuses/user_timeline .
 
 == Recommended reading ==
  * Type inference http://dysphoria.net/2009/06/28/hindley-milner-type-inference-in-scala/
