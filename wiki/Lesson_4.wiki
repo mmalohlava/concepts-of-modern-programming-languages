@@ -107,10 +107,50 @@ SLides
 
 == Homework ==
 
-_TBA_
+For this time, you have two option to choose - the first option contains a programming task, the second option for homework is more explorative.
+ 
+
+=== Option #1 ===
+The task is to write a dice roller. The dice roller is a function that takes one argument: a dice expression.
+
+For example:
+{{{
+> diceRoller("(5d5-4)d(16/d4)+3")
+31
+
+> diceRoller("3d6")
+11
+}}}
+
+Grammar for dice expression defined via BNF:
+{{{
+<expr> := <expr> + <expr>
+| <expr> - <expr>
+| <expr> * <expr>
+| <expr> / <expr>
+| ( <expr> )
+| [<expr>] d <expr>
+| integer
+
+ * Integers are positive; never zero, never negative.
+ * The "d" (dice) expression XdY rolls a Y-sided die (numbered
+   from 1 to Y) X times, accumulating the results. X is optional
+   and defaults to 1.
+ * All binary operators are left-associative.
+ * Operator precedence:
+   ( ) highest
+   d
+   * /
+   + - lowest
+}}}
+
 <wiki:comment>
-The source code of the homework is located at [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/trunk/2011-12/lesson4444mework/conversion.clj SVN].
+The source code of the homework is located at [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/trunk/2011-12/lesson_4/homework/dice-roller.scala SVN].
 </wiki:comment>
+
+=== Option #2 ===
+The task is to explore deployment of Scala applications into [http://www.heroku.com/ Heroku] cloud platform. The starting point for this task is the article http://devcenter.heroku.com/articles/scala .
+
 
 == Recommended reading ==
  * Type inference http://dysphoria.net/2009/06/28/hindley-milner-type-inference-in-scala/
