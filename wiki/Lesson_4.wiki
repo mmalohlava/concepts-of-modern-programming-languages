@@ -111,7 +111,7 @@ For this time, you have two option to choose - the first option contains a progr
  
 
 === Option #1 ===
-The task is to write a dice roller. The dice roller is a function that takes one argument: a dice expression.
+The task is to write a dice roller. The dice roller is a function that takes one argument: a dice expression and returns its value.
 
 For example:
 {{{
