@@ -5,7 +5,7 @@
 
 == Agenda ==
 
-  * Erlang introduction
+  * Erlang in 3hours
 
 == Preparation ==
  * Checkout the recent state of our project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
