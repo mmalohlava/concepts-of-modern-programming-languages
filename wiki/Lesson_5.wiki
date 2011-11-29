@@ -1,0 +1,17 @@
+#summary Introduction to Erlang
+#sidebar TOC
+
+= Lesson 5 details =
+
+== Agenda ==
+
+  * Erlang introduction
+
+== Preparation ==
+ * Checkout the recent state of our project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
+ * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
+ * Install _Eclipse_ from http://www.eclipse.org/downloads/ - choose version called *Eclipse IDE for Java Developers* 
+
+== Homework ==
+
+_TBA_
