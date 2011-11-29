@@ -15,9 +15,14 @@
    * Linux - download sources and compile them
  * IDE Eclipse
    * Install _Eclipse_ from http://www.eclipse.org/downloads/ - choose version called *Eclipse IDE for Java Developers* 
+   * Open _Help -> Market place_ and find _"erlide"_
+   * Install _erlide_
+   * Check installation - the list of perspectives should contain the perspective  
  * Alternative is to use IDE SciTE
-   * You can use also simple SciTE IDE http://www.scintilla.org/SciTEDownload.html
- * other IDE
+   * You can use also simple SciTE IDE 
+     * Download it from from http://www.scintilla.org/SciTEDownload.html
+     * Edit `SciTEGlobal.properties` and enable Erlang by uncommenting the line with `Erlang|erl||\`
+ * Other alternative IDEs
     * See http://www.erlang.org/faq/tools.html#id53616
 
 
