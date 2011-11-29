@@ -13,7 +13,7 @@
  * Install Erlang from http://www.erlang.org/download.html
    * Windows - download binary installation
    * Linux - download sources and compile them
- * Optionally you can use Eclipse IDE
+ * For code editing, you can use Eclipse IDE
    * Install _Eclipse_ from http://www.eclipse.org/downloads/ - choose version called *Eclipse IDE for Java Developers* 
    * Open _Help -> Install new software..._ and put `http://erlide.org/update_nightly` into _Work with_ box.   
    * Install _Erlang IDE_
