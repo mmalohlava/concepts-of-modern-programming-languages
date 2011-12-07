@@ -5,7 +5,96 @@
 
 == Agenda ==
 
-  * Erlang in 3hours
+  * Erlang introduction
+  * Erlang distribution and robustness
+    * cluster creation
+    * message passing
+    * RPC calls
+  * Erlang support for concurrency
+    * `plists` library
+
+== Erlang Lecture notes ==
+  * Erlang is a functional language
+  * Erlang created 1986 in Ericsson
+    * implementation of AXD301 switch
+
+  * variable names starts with upper letter (e.g., `Number = 3`), variables are immutable 
+    * `f().` 
+
+  
+  * cluster creation
+    * start Erlang shell with given node's name and share the same cookine name
+    {{{
+erl -name malohlava@10.10.16.105 -setcookie erlang_workshop
+    }}}
+    * append current node to the cluster where node `martin@10.10.16.109` is located
+    {{{
+net_adm:ping('martin@10.10.16.109').
+    }}}
+    * name of the current node: `node().`
+    * list of all nodes in the cluster: `nodes().`
+
+ * compile the module `fact` from the shell
+ {{{
+> c(fact)
+{ok,fact}
+> fact:fact(4)
+24
+ }}}
+
+ * Erlang types
+   * `$a` represents number of 'a' character
+   * `2#101` stands for 6 (`2` is a base, `101` is a 2-based number) 
+   * `my_shell` is an atom. Atom starts with small letter.
+     * `true`, `false` are atoms
+   * references - `make_ref()` - returns unique identification 
+   * functions (first-class entities)
+     * `fun(N) -> fact:fac(N) end.
+   * Pid - identification of Erlang process. For example: `MyPid = spawn(fact, fac, [1000])`
+        * `fact` - module name
+        * `fac` - function provided by module `fact`
+        * `[1000]` - parameter list for function `fac`
+   * `Self()` returns identification of current process
+   * Tuples `{adam, 24, {july, 21}}`
+   * Lists `[1,2, "a"]`
+     * [100, 100, 100] is also interpred as the string "ddd"
+
+   * Erlang types are ordered.
+     * E.g., `-1 < make_ref()` is true
+
+   * equality
+     * value-based via `==`
+     * identity-based via `=:=`
+
+   * operators `and`,`or` evaluate whole expression
+   * operators `orelse`, `andelse` support partial evaluation of expressions (like in C or Java)
+
+ * Shell
+   * Associate a name with current shell (i.e., process) via `register(my_shell, self()).`
+
+ * Messages
+   * send a message to a process on a given node. Process have to be named
+     * `{ my_shell, "michal@10.10.1.16"} ! 'This is a message'.`
+   * receive a message
+     *  {{{
+flush() -> 
+    receive 
+      Msg -> io:format("You have a message: ~p~n", [Msg]),
+                       flush()
+    after 0 -> ok
+end.
+     }}}
+
+ * RPC calls
+  * `rpc:call(node, io, format, ['Hello']).`
+  * `rpc:multicall(io, format, ['Hello']).`
+
+ * Plists library (see http://code.google.com/p/plists/) for parallel computation
+   *  `plists:map( fun(N) -> mff:fib(N) rem 1000 end, lists:seq(30000, 30010), [1, {processes, 3}]).`
+   * {{{
+Nodes = nodes().
+plists:map( fun(N) -> mff:fib(N) rem 1000 end, lists:seq(300000, 30010), [1, {nodes, Nodes}]).
+   }}}
 
 == Preparation ==
  * Checkout the recent state of our project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
@@ -29,3 +118,18 @@
 == Homework ==
 
 _TBA_
+
+== Recommended reading ==
+  * Open source Erlang - http://erlang.org/
+  * Commercial Erlang - http://erlang.se/
+  * http://learnyousomeerlang.com/
+  * Erlang programming rules - http://www.erlang.se/doc/programming_rules.shtml#HDR19
+  * Erlang documentation - http://erldocs.com/
+  * Erlang wiki - http://www.trapexit.org/
+    * Erlang cookbook - http://www.trapexit.org/Category:CookBook
+  * Erlang utilities - http://jungerl.sourceforge.net/
+  * Erlang examples - http://ftp.sunet.se/pub/lang/erlang/examples/examples-2.0.html
+  * Joe Armstrong, [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&rep=rep1&type=pdf Concurrency Oriented Programming in Erlang]
+  * Martin Logan, Eric Merritt, and Richard Carlsson: [http://www.manning.com/logan/ Erlang and OTP in Action]
+
+
