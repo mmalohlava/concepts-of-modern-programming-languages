@@ -150,7 +150,7 @@ pmerge_sort(List, MaxProcesses) -> % YOUR ASSIGNMENT.
     
 }}}
 
-The soruce code is located in [http://concepts-of-modern-programming-languages.googlecode.com/svn/trunk/2011-12/lesson5/homework/sort.erl SVN repository].
+The source code is located in [http://concepts-of-modern-programming-languages.googlecode.com/svn/trunk/2011-12/lesson5/homework/sort.erl SVN repository].
 
 
 == Recommended reading ==
