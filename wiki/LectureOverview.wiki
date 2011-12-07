@@ -10,4 +10,4 @@ The lecture introduces various features of the following languages:
   * Clojure
   * Scala
   * Erlang
-  * ?
+  * JavaScript
