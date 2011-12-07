@@ -124,7 +124,7 @@ The assignment is to implement a parallel merge sort on lists reflecting a given
 Your implementation should follow [http://en.wikipedia.org/wiki/Merge_sort the classical merge sort algorithm] but for each sub-list it should release a new process sorting the sub-list.
 However, the algorithm can release only the given limit of processes. If the algorithm consumes all available processes then it should use sequential processing.
 
-  * _Note #1: It is possible to use plists library. See http://code.google.com/p/plists/_
+  * _Note #1: It is possible to use plists library. See http://code.google.com/p/plists/ _
   * _Note #2: Advanced solutions can try to incorporate reuse of processes ;-). _
 
 {{{
