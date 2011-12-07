@@ -120,7 +120,36 @@ plists:map( fun(N) -> mff:fib(N) rem 1000 end, lists:seq(300000, 30010), [1, {no
 
 == Homework ==
 
-_TBA_
+The assignment is to implement a parallel merge sort on lists reflecting a given limit of concurrent processes.
+Your implementation should follow [http://en.wikipedia.org/wiki/Merge_sort the classical merge sort algorithm] but for each sub-list it should release a new process sorting the sub-list.
+However, the algorithm can release only the given limit of processes. If the algorithm consumes all available processes then it should use sequential processing.
+
+_Note #1: It is possible to use plists library. See http://code.google.com/p/plists/_
+_Note #2: Advanced solutions can try to incorporate reuse of processes ;-). _
+
+{{{
+-module(sort).
+
+%%
+%% Exported Functions
+%%
+-export([test_pmerge_sort/0, pmerge_sort/2]).
+
+%%
+%% API Functions
+%%
+
+test_pmerge_sort() ->
+	% max number of processes
+	MaxPids = 10,
+	% a list to be sorted
+	L = [random:uniform(1000000) || N <- lists:seq(1, 1000000)],	
+	timer:tc(sort, pmerge_sort, [L, MaxPids]).
+
+pmerge_sort(List, MaxProcesses) -> % YOUR ASSIGNMENT.
+    
+}}}
+
 
 == Recommended reading ==
   * Open source Erlang - http://erlang.org/
@@ -134,3 +163,5 @@ _TBA_
   * Erlang examples - http://ftp.sunet.se/pub/lang/erlang/examples/examples-2.0.html
   * Joe Armstrong, [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&rep=rep1&type=pdf Concurrency Oriented Programming in Erlang]
   * Martin Logan, Eric Merritt, and Richard Carlsson: [http://www.manning.com/logan/ Erlang and OTP in Action]
+
+
