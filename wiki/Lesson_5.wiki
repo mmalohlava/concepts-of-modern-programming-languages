@@ -92,8 +92,9 @@ end.
   * `rpc:multicall(io, format, ['Hello']).`
 
  * Plists library (see http://code.google.com/p/plists/) for parallel computation
-   *  `plists:map( fun(N) -> mff:fib(N) rem 1000 end, lists:seq(30000, 30010), [1, {processes, 3}]).`
-   * {{{
+   * Current node, 3 processes compute Fibionacioho numbers in given range `plists:map( fun(N) -> mff:fib(N) rem 1000 end, lists:seq(30000, 30010), [1, {processes, 3}]).`
+   * All nodes (1 process on each node spawn) compute Fibionacioho numbers in given range
+{{{
 Nodes = nodes().
 plists:map( fun(N) -> mff:fib(N) rem 1000 end, lists:seq(300000, 30010), [1, {nodes, Nodes}]).
    }}}
