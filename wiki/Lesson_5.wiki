@@ -78,7 +78,7 @@ net_adm:ping('martin@10.10.16.109').
 { my_shell, "michal@10.10.1.16"} ! 'This is a message'.
 }}}
    * receive a message
-     *  {{{
+{{{
 flush() -> 
     receive 
       Msg -> io:format("You have a message: ~p~n", [Msg]),
