@@ -73,8 +73,10 @@ net_adm:ping('martin@10.10.16.109').
    * Associate a name with current shell (i.e., process) via `register(my_shell, self()).`
 
  * Messages
-   * send a message to a process on a given node. Process have to be named
-     * `{ my_shell, "michal@10.10.1.16"} ! 'This is a message'.`
+   * send a message to a process on a given node. Process have to be named!
+     {{{
+{ my_shell, "michal@10.10.1.16"} ! 'This is a message'.
+}}}
    * receive a message
      *  {{{
 flush() -> 
@@ -131,5 +133,3 @@ _TBA_
   * Erlang examples - http://ftp.sunet.se/pub/lang/erlang/examples/examples-2.0.html
   * Joe Armstrong, [http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.116.1969&rep=rep1&type=pdf Concurrency Oriented Programming in Erlang]
   * Martin Logan, Eric Merritt, and Richard Carlsson: [http://www.manning.com/logan/ Erlang and OTP in Action]
-
-
