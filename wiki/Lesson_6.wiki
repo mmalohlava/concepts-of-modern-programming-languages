@@ -1,0 +1,25 @@
+#summary Principles of concurrent programming and parallelism
+
+#sidebar TOC
+
+= Lesson 6 details =
+
+== Agenda ==
+
+  * Asynchronous calculations
+  * Fork/Join
+  * Parallel collections
+  * Dataflow
+  * Actors
+  * Agents
+  * Stm
+
+== Preparation ==
+
+  * Checkout the recent state of our Project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
+  * Grab *Groovy version 1.8.4* from [http://groovy.codehaus.org/Download the groovy download page]
+  * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
+
+== Homework ==
+
+The assignment will be specified after the session and will be places in out Project in [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/#svn%2Ftrunk%2F2011-12%2Flesson6%2Fhomework the homework filder]  
