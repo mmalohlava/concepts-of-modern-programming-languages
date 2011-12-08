@@ -22,4 +22,4 @@
 
 == Homework ==
 
-The assignment will be specified after the session and will be places in out Project in [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/#svn%2Ftrunk%2F2011-12%2Flesson6%2Fhomework the homework filder]  
+The assignment will be specified after the session and will be placed in our Project in [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/#svn%2Ftrunk%2F2011-12%2Flesson6%2Fhomework SVN].
