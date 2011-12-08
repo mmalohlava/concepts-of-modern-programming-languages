@@ -17,7 +17,7 @@
 == Preparation ==
 
   * Checkout the recent state of our Project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
-  * Grab *Groovy version 1.8.4* from [http://groovy.codehaus.org/Download the groovy download page]
+  * _Important_ - Grab *the new Groovy version 1.8.4* from [http://groovy.codehaus.org/Download the groovy download page]
   * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
 
 == Homework ==
