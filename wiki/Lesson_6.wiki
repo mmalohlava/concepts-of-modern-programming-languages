@@ -1,6 +1,5 @@
 #summary Principles of concurrent programming and parallelism
 #labels Featured
-
 #sidebar TOC
 
 = Lesson 6 details =
