@@ -45,7 +45,7 @@ class SwingLifeGameWithDataflowOperators {
 
     private void setupUI() {
         UIManager.setLookAndFeel(new MetalLookAndFeel())
-        frame = builder.frame(title: "Game of Life", defaultCloseOperation: JFrame.EXIT_ON_CLOSE) {
+        frame = builder.frame(title: "Game of Life") {
             vbox {
                 hbox {
                     JLabel caption = label('Iteration # ')

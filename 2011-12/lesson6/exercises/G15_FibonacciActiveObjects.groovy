@@ -1,1 +1,1 @@
-//TODO Implement a Fibonacci number generator using Stateless actors
+//TODO Implement a Fibonacci number generator using Active Objects actors
