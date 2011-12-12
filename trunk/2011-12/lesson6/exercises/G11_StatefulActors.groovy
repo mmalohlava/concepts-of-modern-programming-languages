@@ -22,7 +22,7 @@ abstract class RegistrationDetails {
 final idGenerator = actor {
     loop {
         react {
-            sleep 100
+            sleep 100  //Pretend we do some work here
             it << System.currentTimeMillis()
         }
     }
