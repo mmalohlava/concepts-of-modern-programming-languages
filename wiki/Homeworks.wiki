@@ -8,4 +8,4 @@
   * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_3#Homework Homework #3 - Clojure]
   * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_4#Homework Homework #4 - Scala]
   * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_5#Homework Homework #5 - Erlang]
-  * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_6#Homework Homework #5 - Concurrency in Groovy]
+  * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_6#Homework Homework #6 - Concurrency in Groovy]
