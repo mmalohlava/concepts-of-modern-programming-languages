@@ -1,3 +1,5 @@
+import groovyx.gpars.agent.Agent
+
 interface Cart {
     void addIfNotPresent(String product)
 

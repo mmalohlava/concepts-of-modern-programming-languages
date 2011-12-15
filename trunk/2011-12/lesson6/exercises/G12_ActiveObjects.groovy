@@ -1,5 +1,7 @@
 import groovyx.gpars.actor.DynamicDispatchActor
 import org.codehaus.groovy.runtime.NullObject
+import groovyx.gpars.activeobject.ActiveObject
+import groovyx.gpars.activeobject.ActiveMethod
 
 //TODO Turn the following actor into an ActiveObject so that the script passes
 
