@@ -1,6 +1,6 @@
 import static groovyx.gpars.GParsPool.withPool
 
-final numbers = [1G, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 5, 6, 7, 8, 4, 5, 6, 3, 4, 5, 7, 2, 23, 43, 235, 64G]
+final numbers = [1G, 2G, 3G, 4G, 5G, 6G, 7G, 8G, 9G, 9G, 9G, 5G, 6G, 7G, 8G, 4G, 5G, 6G, 3G, 4G, 5G, 7G, 2G, 23G, 43G, 235G, 64G]
 
 def product1 = 1
 numbers.each {
