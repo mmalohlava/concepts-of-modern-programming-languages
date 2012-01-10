@@ -1,0 +1,9 @@
+h2 Chat messages
+
+if messages.length === 0 
+  p There are no chat messages.
+else
+  ul
+    each msg in messages
+      li 
+       | <strong>@#{msg.username}</strong> : #{msg.text} <i>(on #{msg.ts})</i>

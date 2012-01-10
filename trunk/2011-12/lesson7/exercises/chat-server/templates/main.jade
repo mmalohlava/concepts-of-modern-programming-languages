@@ -1,0 +1,70 @@
+!!! strict
+html
+  head
+    title= title
+    link(href='/css/screen.css', media="screen", rel="stylesheet", type="text/css" )
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js')
+    script
+      function formatUser(user) {
+        return user.username + ' ('+user.name + ' ' + user.surname + ')';
+      }
+      function getAllUsers() {
+        //$('#userlist').load('/all-users');
+        $.getJSON('/all-users', function(json) { 
+          $('#userlist li').remove()
+          $.each(json, function(k, v) {
+              $('#userlist').append('<li>' + formatUser(v) + '</li>');
+          });
+        });
+      }
+
+      $(document).ready(function() {
+        getAllUsers();       
+        $('#getusers').click(getAllUsers);
+        $('#loading_indicator')
+            .ajaxStart(function() { $(this).show(); })
+            .ajaxStop(function() { $(this).hide(); });
+        $('form#adduserform').submit(function(e) {
+          e.preventDefault();
+          var username=$('#username').val();
+          var name=$('#name').val();
+          var surname=$('#surname').val();
+          $.get('/register-user', {username: username, name: name, surname: surname}, function(resp) {
+            getAllUsers();
+          });
+          $('form#adduserform')[0].reset();
+        });
+      });
+
+  body
+    #header
+      h1 Chat Server
+    #statusbar
+        #loading_indicator
+          strong Loading ...
+    
+    .container.leftmenu
+      .colleft
+        .col1
+          ul#userlist
+          a#getusers(href="#") Get Users
+
+          #adduser
+            form#adduserform(action="/register-user", method="get")
+              label Username:  
+                input#username(type="text",name="username") 
+                | <br />
+              label Name:  
+                input#name(type="text",name="name") 
+                | <br />
+              label Surname:  
+                input#surname(type="text", name="surname") 
+                | <br />
+              input(type="submit", value="Add user") 
+
+        .col2
+          - if (message)
+            p#message message
+          != body
+
+     
