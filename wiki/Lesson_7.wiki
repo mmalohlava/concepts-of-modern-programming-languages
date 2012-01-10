@@ -1,4 +1,4 @@
-#summary Principles of concurrent programming and parallelism in Javascript, Node.JS and CoffeScript
+#summary Principles of Javascript, Node.js and CoffeScript
 #labels Featured
 #sidebar TOC
 
@@ -35,16 +35,16 @@
       * socket.io
  
  * Coffescript
-   * concept of Coffescript as "little language"
-   * Coffescript in NodeJS
-   * Coffescript in browser
+   * Concept of Coffescript
+   * Coffescript in browse as "little language"
+   * Coffescript in Node.js
 
 == Preparation ==
 
   * _Browser_ - Firefox, Chrome
   * _node.js_ - download actual version
     * for Linux - compile source code and put binary `node` on your `PATH` 
-    * for Windows - you can use Windows installer, however, it is recommended to use Linux version in virtualized environment (e.g., VirtualBox/VMWare + Ubuntu)
+    * for Windows - you can use Windows installer, however, it is recommended to use Linux version in virtualized environment (e.g., !VirtualBox/VMWare + Ubuntu)
 
   * Optional requirement: _npm_ - should be bundled with node.js or install it from http://npmjs.org/:
     * Linux
@@ -55,14 +55,14 @@
 
 == Homework ==
 
-The assignment will be specified after the session and will be placed in our Project in [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/#svn%2Ftrunk%2F2011-12%2Flesson6%2Fhomework SVN].
+The assignment will be specified after the session and will be placed in our Project in [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/#svn%2Ftrunk%2F2011-12%2Flesson7%2Fhomework SVN].
 
 == Links ==
 
- * _NodeJS_ - http://nodejs.org/
+ * _Node.js_ - http://nodejs.org/
  * _npm_ - http://npmjs.org/
- * _JavaScript V8_ - http://code.google.com/p/v8/
- * _CoffeScript_ - http://coffeescript.org/
+ * _Javascript V8_ - http://code.google.com/p/v8/
+ * _Coffescript_ - http://coffeescript.org/
  * _Browser of various JS libraries_ - http://microjs.com/
 
  * Guides
@@ -73,6 +73,6 @@ The assignment will be specified after the session and will be placed in our Pro
    * Javascript 
       * http://eloquentjavascript.net/
       * http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
-   * CoffeeScript
+   * Coffeescript
      * http://autotelicum.github.com/Smooth-CoffeeScript/SmoothCoffeeScript.html
 
