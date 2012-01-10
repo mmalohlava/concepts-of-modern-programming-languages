@@ -43,5 +43,6 @@ Clooj console is suitable for quick start with Clojure. It can be downloaded fro
     * set of useful namespaces
   * _Learn Clojure_ - http://learn-clojure.com/
     * another web page showing how to start with Clojure
-  * Online Clojure Console - http://www.try-clojure.org/
-  * Clojure tutorial for kids - http://www.lisperati.com/clojure-spels/
+  * _Online Clojure Console_ - http://www.try-clojure.org/
+  * _Clojure tutorial for kids_ - http://www.lisperati.com/clojure-spels/
+  * _Clojure Atlas_ - documentation navigator - http://www.clojureatlas.com/

@@ -1,0 +1,78 @@
+#summary Principles of concurrent programming and parallelism in Javascript, Node.JS and CoffeScript
+#labels Featured
+#sidebar TOC
+
+= Lesson 7 details =
+
+== Agenda ==
+
+ * Javascript basis
+   * basic syntax
+   
+   * object-based model
+     * prototypes, mixins, clones
+     * multi-level prototypes hierarchies
+     * extending Object, Array
+   
+   * closures 
+     * emulating private methods with closures 
+       
+   * singleton pattern
+   * module pattern 
+
+   * Javascript in browser
+     * jquery, underscore libraries
+
+ * NodeJS 
+   * motivation 
+   * one-thread model explained
+   * demos
+     * simple chat server
+       * dirty database, jade templating
+     * advanced chat server
+      * express application server
+      * backbone model and view
+      * socket.io
+ 
+ * Coffescript
+   * concept of Coffescript as "little language"
+   * Coffescript in NodeJS
+   * Coffescript in browser
+
+== Preparation ==
+
+  * _Browser_ - Firefox, Chrome
+  * _node.js_ - download actual version
+    * for Linux - compile source code and put binary `node` on your `PATH` 
+    * for Windows - you can use Windows installer, however, it is recommended to use Linux version in virtualized environment (e.g., VirtualBox/VMWare + Ubuntu)
+
+  * Optional requirement: _npm_ - should be bundled with node.js or install it from http://npmjs.org/:
+    * Linux
+      * Put `node` on your `PATH`
+      * Execute `curl http://npmjs.org/install.sh | sh`
+    * Windows
+      * should be included in Node.js Windows distribution
+
+== Homework ==
+
+The assignment will be specified after the session and will be placed in our Project in [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/#svn%2Ftrunk%2F2011-12%2Flesson6%2Fhomework SVN].
+
+== Links ==
+
+ * _NodeJS_ - http://nodejs.org/
+ * _npm_ - http://npmjs.org/
+ * _JavaScript V8_ - http://code.google.com/p/v8/
+ * _CoffeScript_ - http://coffeescript.org/
+ * _Browser of various JS libraries_ - http://microjs.com/
+
+ * Guides
+   * Node.js
+     * http://www.nodebeginner.org/
+     * http://nodeguide.com/
+     * https://github.com/joyent/node/wiki/Resources
+   * Javascript 
+      * http://eloquentjavascript.net/
+      * http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
+   * CoffeeScript
+     * http://autotelicum.github.com/Smooth-CoffeeScript/SmoothCoffeeScript.html
+
