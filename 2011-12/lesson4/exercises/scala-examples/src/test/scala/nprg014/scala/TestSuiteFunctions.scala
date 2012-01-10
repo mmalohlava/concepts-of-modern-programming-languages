@@ -130,21 +130,22 @@ class TestSuiteFunctions extends FunSuite {
   
   test("note #9 - function as parameter") {
     
-    def tester(name:String, desc:String*)(f: =>Unit) { 
+    def tester(name:String, desc:String*)(f: =>Unit)(x: => Unit) { 
       println("Test " + name);
       println(" -- testing f = " + f )
       // invoking the given function
       (f _)() 
     }
     
-    tester("printing") { 
-      println("A")
-      val a = 3;
-      a;
-      println("b")
-    }
-    tester("printing") (println)
-    tester("printing", "testing println function")(println)    
+//    tester("printing", "a", "b", "c") { 
+//      println("A")
+//      val a = 3;
+//      a;
+//      println("b")
+//    } { val a = 3}
+    
+    tester {"printing A"; "xyz"} (println("first body")) {println("second body")}
+//    tester("printing", "testing println function")(println)    
   }
   
     
