@@ -18,12 +18,8 @@ for(var p in Math) {
     console.log(p);
 }
 
-
 // Note:
 // Converting to an Array
 // The code below will return a new Array containing all the elements of the arguments object.
 // Array.prototype.slice.call(arguments);
 // Because this conversion is slow, it is not recommended to use it in performance-critical sections of code.
-
-
-// === means strict equal operator (does not do type coersion as ==)

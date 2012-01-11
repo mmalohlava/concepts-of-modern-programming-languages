@@ -22,4 +22,3 @@ console.log('Variable value outside the scope', var1);
 
 console.log('Variable value outside the scope', var1);
 
-TODO difference between == and ===, !=, !==
