@@ -13,5 +13,5 @@ handleUrl['/all-messages'] = handlers.handleGetAllMessages;
 handleUrl['/all-users'] = handlers.handleGetAllUsers;
 handleUrl['/css/screen.css'] = handlers.handleStaticCss;
 
-server.start(4000, router.route, handleUrl);
+server.start(8080, router.route, handleUrl);
 
