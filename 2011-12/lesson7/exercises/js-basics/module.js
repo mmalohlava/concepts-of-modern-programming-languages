@@ -76,9 +76,4 @@ console.log('Users with name "Joe":', SearchEngine.UserSearch.findUserByName('Jo
 /*
  * It is possible to extend the module. ASSIGNMENT
  */
-var NewSearchEngine = (function(superModule) {
-    var parent = superModule;
-    var roleAdmin = 'admin';
-
-    return
-})(SearchEngine);
+//var NewSearchEngine = ASSIGNMENT
