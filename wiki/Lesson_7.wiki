@@ -42,11 +42,11 @@
 == Preparation ==
 
   * _Browser_ - Firefox, Chrome
-  * _node.js_ - download actual version
+  * _node.js_ - download actual version from http://nodejs.org/
     * for Linux - compile source code and put binary `node` on your `PATH` 
     * for Windows - you can use Windows installer, however, it is recommended to use Linux version in virtualized environment (e.g., !VirtualBox/VMWare + Ubuntu)
 
-  * Optional requirement: _npm_ - should be bundled with node.js or install it from http://npmjs.org/:
+  * Optional requirement: _npm_ - should be bundled with node.js or install it from http://npmjs.org/ 
     * Linux
       * Put `node` on your `PATH`
       * Execute `curl http://npmjs.org/install.sh | sh`
