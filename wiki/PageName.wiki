@@ -4,12 +4,11 @@
 
 ==Student feedback==
   * it's quite easy to handle the syntax of new language => more focus on concepts
+  * provide more practical examples with current technologies (e.g., Heroku, Google/fcb API,...)
 
 ==Recommendation==
   * to have two types of assignments:
     # after every lecture
     # one large project - a student can choose a topic and one of the languages and implement solution
   * to focus more on core concepts - show them in different languages
-
-
 
