@@ -55,7 +55,20 @@
 
 == Homework ==
 
-The assignment will be specified after the session and will be placed in our Project in [http://code.google.com/p/concepts-of-modern-programming-languages/source/browse/#svn%2Ftrunk%2F2011-12%2Flesson7%2Fhomework SVN].
+The assignment is to implement a simple _node.js_ based application which would allow a user to manage its TODOs lists. 
+
+The application should permit 
+  * adding/removing TODO lists
+  * adding/removing TODOs in a selected list
+  * editing existing TODOs
+  * moving a TODO from one list to another list
+
+  * the list and TODOs should be pesisted in database
+  * user management is not required -i.e., all the user acessing the application can manipulate with TODOs
+
+The application should use Javascript heavily on the client side to avoid a full refresh of the page - e.g., data manipulation (list of TODOs, TODOs lists, commiting a new TODO, removing old TODO) should be implemented via an AJAX/Comet call with corresponding rewrite of DOM tree of the current page (i.e., use _jquery_).
+
+Optionaly, you can also try to deploy the application into Heroku cloud (see http://devcenter.heroku.com/articles/node-js).
 
 == Links ==
 
