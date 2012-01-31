@@ -89,3 +89,5 @@ Optionaly, you can also try to deploy the application into Heroku cloud (see htt
    * Coffeescript
      * http://autotelicum.github.com/Smooth-CoffeeScript/SmoothCoffeeScript.html
 
+ * Varioues Javascript WTFs
+    * http://wtfjs.com/
