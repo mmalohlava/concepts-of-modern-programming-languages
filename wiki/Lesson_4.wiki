@@ -163,3 +163,4 @@ _Note_:  To get a Twitter timeline see documentation of the REST method `user_ti
 == Recommended reading ==
  * Type inference http://dysphoria.net/2009/06/28/hindley-milner-type-inference-in-scala/
  * Scala ecosystem https://wiki.scala-lang.org/display/SW/Tools+and+Libraries
+ * Effective Scala http://twitter.github.com/effectivescala/
