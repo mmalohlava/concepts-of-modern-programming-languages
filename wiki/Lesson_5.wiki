@@ -99,6 +99,9 @@ Nodes = nodes().
 plists:map( fun(N) -> mff:fib(N) rem 1000 end, lists:seq(300000, 30010), [1, {nodes, Nodes}]).
    }}}
 
+ * Monitor processes
+   * start GUI process monitor via `appmon:start().` or via toolbar GUI `toolbar:start().`
+
 == Preparation ==
  * Checkout the recent state of our project from [http://code.google.com/p/concepts-of-modern-programming-languages/source/checkout SVN]
  * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
