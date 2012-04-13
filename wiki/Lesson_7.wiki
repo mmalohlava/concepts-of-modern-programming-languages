@@ -91,3 +91,6 @@ Optionaly, you can also try to deploy the application into Heroku cloud (see htt
 
  * Varioues Javascript WTFs
     * http://wtfjs.com/
+
+ * Powerfull NodeJS framework (unifies client and server code)
+   * http://nowjs.com/
