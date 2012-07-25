@@ -94,3 +94,6 @@ Optionaly, you can also try to deploy the application into Heroku cloud (see htt
 
  * Powerfull NodeJS framework (unifies client and server code)
    * http://nowjs.com/
+
+ * When somebody tries to explain JavaScript's prototype system
+   * http://axisofeval.blogspot.com/2012/07/when-somebody-tries-to-explain.html
