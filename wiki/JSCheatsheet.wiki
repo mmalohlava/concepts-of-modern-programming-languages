@@ -6,3 +6,84 @@ Node-JS book: http://www.nodebeginner.org/
 
 JS-frameworks: http://microjs.com/
 
+Understanding node js http://debuggable.com/posts/understanding-node-js:4bd98440-45e4-4a9a-8ef7-0f7ecbdd56cb
+Understanding node js event loop  http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/
+
+NodeJS
+ - V8 Javascript VM
+ - "That's right, everything runs in parallel, except your code" !
+ - single threaded, callbacks (same as SWT signel threaded UI)
+   - and event-based
+ - all IO API is assynchronous by design
+ - if request contains lot of IO/CPU intensive work -> split it into callbacksa
+   - Other than I/O calls, Node.js expects that all requests return quickly; 
+
+ * all objects emeting events inherit from EventEmmiter
+
+ Internally, node.js relies on libev to provide the event loop, which is supplemented by libeio which uses pooled threads to provide asynchronous I/O. To learn even more,  have a look at the libev documentation.
+
+  Node.js patterns: http://creationix.com/jsconf.pdf
+    * http://www.slideshare.net/creationix/techniques-and-tools-for-taming-tangled-twisted-trains-of-thought
+
+
+Graphical game & progress demo COOOL:
+http://www.slideshare.net/gabriele.lana/nodejs-explained-with-examples?src=related_normal&rel=4419762
+
+Js modules
+ * jquery - http://docs.jquery.com/Tutorials:Getting_Started_with_jQuery
+ * underscore
+ * backbone - models
+ * prototype.js
+ * haml.js (saas), compass
+
+ * node jake (build program)
+ * jsdom - browser independent DOM implementation (w3c comply)a
+
+  * socket.io (v. WebSocketrs)
+
+  * redis
+
+
+COOOL: Chat server example: http://fzysqr.com/2011/02/28/nodechat-js-using-node-js-backbone-js-socket-io-and-redis-to-make-a-real-time-chat-app/
+
+Node roundup: http://dailyjs.com/2011/04/04/node-tutorial-19/
+
+Cloud: https://github.com/dshaw/mixture/tree/master/examples/stock-quotes
+FBGraph: http://dailyjs.com/2011/10/19/node-roundup/
+
+
+== Links ==
+
+  * Google Javascript Guide - http://google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml
+
+  Functions:
+   {} does not create a new local block, only functions are used to define local scope
+   - recursion is expensive
+
+   * JS patterns
+    http://addyosmani.com/resources/essentialjsdesignpatterns/book/#mixinpatternjavascript
+
+    * _Principles of Writing Consistent, Idiomatic JavaScript_ - https://github.com/rwldrn/idiomatic.js
+    
+    * _JS Garden_
+      * http://bonsaiden.github.com/JavaScript-Garden/
+
+    * _JS patterns_
+      * http://addyosmani.com/largescalejavascript/
+      * http://addyosmani.com/resources/essentialjsdesignpatterns/book/
+      * https://github.com/addyosmani/backbone-fundamentals
+
+    * _jQuery fundamentals_ - http://jqfundamentals.com/
+
+============
+ * explain difference between Ajax, Comet calls - see http://www.slideshare.net/amix3k/comet-with-nodejs-and-v8
+ * explain need of asynchrounous update of clients
+ * nodeJS - everytwhing is asynchronous http://www.slideshare.net/the_undefined/nodejs-a-quick-tour
+ * key-pair DB - Redis (in-memory), CouchDB
+
+Redis - Redis is an open source, advanced key-value store. It is often referred to as a data structure server since keys can contain strings, hashes, lists, sets and sorted sets.
+      - excelent TUTORIAL
+
+ Event driven programming
+
+
