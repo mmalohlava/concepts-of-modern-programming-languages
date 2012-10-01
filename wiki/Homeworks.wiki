@@ -3,8 +3,8 @@
 #sidebar TOC
 
 = Homeworks =
-  * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_1#Homework Homework #1 - Groovy]
 <wiki:comment>
+  * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_1#Homework Homework #1 - Groovy]
   * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_2#Homework Homework #2 - Groovy]
   * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_3#Homework Homework #3 - Clojure]
   * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_4#Homework Homework #4 - Scala]
