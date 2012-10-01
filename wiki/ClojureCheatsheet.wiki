@@ -1,0 +1,48 @@
+#summary A short summary of Clojure tips, tricks and resources.
+#sidebar TOC
+
+= Introduction =
+Clojure ~list dialect but takes a part from Common Lisp
+
+
+= Basics =
+
+  * Data mode
+  * Code mode
+
+  form syntax (method-name p1 p2 p3)
+Special forms: http://clojure.org/special_forms
+
+* quotation
+(a b c) - call of function
+'(a b c) (quote (a b c)) - is a list
+(list a b c)
+
+ukazat jak se definuje DOC, test,pre, post conditions
+a jak se pouziva (meta #'meta), (source 'doc)
+
+= Examples =
+ * ROMAN to numbers
+
+= IDE =
+Clooj console is suitable for quick start with Clojure. It can be downloaded from https://github.com/arthuredelstein/clooj/downloads.
+- zminit jak se dostane doc
+ (clojure.repl/doc hash - nebo pridat import use 'clojure.repl)
+ (clojure.repl/source hash - nebo pridat import use 'clojure.repl)
+ * or type TAB
+
+= Links =
+  * _Clojure_ - http://clojure.org/
+  * _!ClojureDocs_ - http://clojuredocs.org/
+    * _Clojure Quick Reference_ - http://clojuredocs.org/quickref/Clojure%20Core
+  * _Clojure - Functional Programming for the JVM_ - http://java.ociweb.com/mark/clojure/article.html
+    * comprehensive introduction to the Clojure programming language
+  * _Coming close to Clojure_ - http://codingndesign.com/blog/?p=239
+    * Video tutorial showing usage of Clojure
+  * _Clojure Contrib_ - http://clojure.github.com/clojure-contrib/
+    * set of useful namespaces
+  * _Learn Clojure_ - http://learn-clojure.com/
+    * another web page showing how to start with Clojure
+  * _Online Clojure Console_ - http://www.try-clojure.org/
+  * _Clojure tutorial for kids_ - http://www.lisperati.com/clojure-spels/
+  * _Clojure Atlas_ - documentation navigator - http://www.clojureatlas.com/
