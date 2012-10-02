@@ -3,7 +3,7 @@
 
 = Introduction =
 
-The project collects resource, programming examples and slides which are presented during the lecture "Concepts of Modern Programming Languages" ([https://is.cuni.cz/studium/predmety/index.php?tid=&do=predmet&kod=NPRG014 NPRG014]).
+The project collects resource, programming examples and slides which are presented during the lecture _"Concepts of Modern Programming Languages"_ ([https://is.cuni.cz/studium/predmety/index.php?tid=&do=predmet&kod=NPRG014 NPRG014]).
 
 The lecture introduces various features of the following languages:
   * Groovy
