@@ -1,4 +1,4 @@
-#summary Introduction to Erlang
+#summary List of homeworks
 #labels Featured
 #sidebar TOC
 
