@@ -10,20 +10,18 @@ The lecture introduces various features of the following languages:
   * Clojure
   * Scala
   * Erlang
-  * Javascript
+  * !JavaScript
 
-|| *Feature*                  || *Language(s)*   ||
+|| *Feature*                  || *Languages*     ||
 || Static meta-programming    || Groovy          ||
 || Dynamic meta-programming   || Groovy, Clojure ||
 || Domain-specific languages  || Groovy, Scala   ||
 || Functional programming     || Groovy, Scala, Clojure, Erlang ||
 || Concurrency                || Groovy, Erlang, Scala, Clojure ||
-|| Prototype-based programming || JavaScript, CoffeeScript ||
-|| Scripting support          || Groovy, JavaScript ||
-|| Web programming            || Scala, JavaScript (Node.JS) ||
-|| Distributed concurrency    || Erlang, Clojure, Scala (Akka) ||
+|| Distributed concurrency    || Erlang, Clojure ||
+|| Prototype-based programming || !JavaScript, !CoffeeScript ||
+|| Dynamic scripting          || Groovy, !JavaScript ||
+|| Web programming models     || Scala, !JavaScript (Node.js) ||
 || Lazy data structures       || Clojure, Erlang ||
-
-
 
 
