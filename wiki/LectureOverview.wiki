@@ -12,6 +12,8 @@ The lecture introduces various features of the following languages:
   * Erlang
   * !JavaScript
 
+The demonstrated features are:
+
 || *Feature*                  || *Languages*     ||
 || Static meta-programming    || Groovy          ||
 || Dynamic meta-programming   || Groovy, Clojure ||
@@ -23,5 +25,3 @@ The lecture introduces various features of the following languages:
 || Dynamic scripting          || Groovy, !JavaScript ||
 || Web programming models     || Scala, !JavaScript (Node.js) ||
 || Lazy data structures       || Clojure, Erlang ||
-
-
