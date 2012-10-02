@@ -1,4 +1,5 @@
 #summary Lecture overview
+#labels Featured
 #sidebar TOC
 
 = Introduction =
