@@ -2,7 +2,7 @@ class DynamicMoney {
     Integer amount
     String currency
 
-    DynamicMoney plus(Money other) {
+    DynamicMoney plus(DynamicMoney other) {
         if (this.currency != other.currency) throw new IllegalArgumentException('Cannot add different currencies');
         new DynamicMoney(amount: this.amount + other.amount, currency: this.currency)
     }
