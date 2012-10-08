@@ -2,6 +2,8 @@ def o1 = order pizza with tomato and mushrooms to "Malostranske namesti"
 def o2 = order cake with plums and apples and cream to "Malostranske namesti"
 def o3 = order pizza menuDuJour() to "Malostranske namesti"
 
+//TASK Add support for house numbers in address (aka to "Malostranske namesti", 25)
+
 [o1, o2, o3].each {println it}
 
 println 'done'

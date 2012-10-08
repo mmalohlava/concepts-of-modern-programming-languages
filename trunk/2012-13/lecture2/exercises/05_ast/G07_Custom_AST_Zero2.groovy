@@ -20,7 +20,7 @@ import static org.codehaus.groovy.control.CompilePhase.SEMANTIC_ANALYSIS
 @GroovyASTTransformationClass("ZeroTransformation2")
 public @interface Zero2 {}
 
-//TASK Complete the transformation code at the indicated position so as the test passes
+//TASK Complete the transformation code ASTBuilder.buildFromCode() at the indicated position so as the test passes
 
 @GroovyASTTransformation(phase = SEMANTIC_ANALYSIS)
 public class ZeroTransformation2 implements ASTTransformation {
