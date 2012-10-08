@@ -1,15 +1,19 @@
-import org.codehaus.groovy.ast.ASTNode
-import org.codehaus.groovy.control.SourceUnit
-import org.codehaus.groovy.transform.ASTTransformation
-import org.codehaus.groovy.transform.GroovyASTTransformation
-import org.codehaus.groovy.transform.GroovyASTTransformationClass
-
 import java.lang.annotation.ElementType
 import java.lang.annotation.Retention
 import java.lang.annotation.RetentionPolicy
 import java.lang.annotation.Target
-
+import org.codehaus.groovy.ast.ASTNode
+import org.codehaus.groovy.ast.MethodNode
+import org.codehaus.groovy.control.SourceUnit
+import org.codehaus.groovy.transform.ASTTransformation
+import org.codehaus.groovy.transform.GroovyASTTransformation
+import org.codehaus.groovy.transform.GroovyASTTransformationClass
 import static org.codehaus.groovy.control.CompilePhase.SEMANTIC_ANALYSIS
+import org.codehaus.groovy.ast.builder.AstBuilder
+import org.codehaus.groovy.ast.stmt.BlockStatement
+import org.codehaus.groovy.syntax.SyntaxException
+import org.codehaus.groovy.control.messages.SyntaxErrorMessage
+
 
 @Retention(RetentionPolicy.SOURCE)
 @Target([ElementType.METHOD])
