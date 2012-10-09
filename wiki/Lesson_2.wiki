@@ -1,6 +1,5 @@
-#summary Domain specific languages in dynamic languages (Groovy). builders for hierarchical data, static meta-programming, AST transformations (aka macros)
+#summary Domain specific languages in dynamic languages (Groovy), builders for hierarchical data, static meta-programming, AST transformations (aka macros)
 #labels Featured,Phase-Requirements
-
 #sidebar TOC
 
 = Lesson 2 details =
