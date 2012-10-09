@@ -23,6 +23,7 @@ Grab the [http://code.google.com/p/concepts-of-modern-programming-languages/down
 
 == Homework ==
 
+{{{
 import java.util.concurrent.locks.ReentrantLock
 
 //In concurrent programms it is very important to protect access to shared mutable data. Locks is one way to prevent race conditions on share data,
@@ -47,6 +48,7 @@ threads*.join()
 assert 1275 == sum
 
 //TASK Define a withLock method on the ReentrantLock class that would protect shared data from concurrent access
+}}}
 //when evaluating the supplied piece of code and that would safely unlock the data once the block of code finishes.
 
 
