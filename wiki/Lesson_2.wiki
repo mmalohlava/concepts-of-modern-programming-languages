@@ -77,8 +77,7 @@ class Calculator {
     int sum = 0
 
     def add(int value) {
-        int v = sum + value
-        sum = v
+        sum += value
     }
 
     def subtract(int value) {
