@@ -1,4 +1,4 @@
-@Immutable class Product {
+@groovy.transform.Immutable class Product {
     String code
     String name
     int price
