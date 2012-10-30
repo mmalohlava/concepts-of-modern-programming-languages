@@ -12,7 +12,7 @@
 == Homework ==
 
 {{{
-// Add necessary class and object definitions in order to make the following work.
+// Add necessary class and object definitions in order to make the statements in the main work.
 
 // ...
 // ...
