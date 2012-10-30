@@ -3,9 +3,9 @@
  * [LectureOverview Lectures]
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_1 Lesson 1] - Groovy
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_2 Lesson 2] - Groovy
-<wiki:comment>
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_3 Lesson 3] - Scala
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_4 Lesson 4] - Scala
+<wiki:comment>
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_5 Lesson 5] - Erlang
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_6 Lesson 6] - Concurrency
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_7 Lesson 7] - !JavaScript
