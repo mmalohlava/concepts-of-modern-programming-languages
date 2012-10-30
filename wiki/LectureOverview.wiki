@@ -8,7 +8,6 @@ The project collects resource, programming examples and slides which are present
 
 The lecture introduces various features of the following languages:
   * Groovy
-  * Clojure
   * Scala
   * Erlang
   * !JavaScript
@@ -17,12 +16,12 @@ The demonstrated features are:
 
 || *Feature*                  || *Languages*     ||
 || Static meta-programming    || Groovy          ||
-|| Dynamic meta-programming   || Groovy, Clojure ||
+|| Dynamic meta-programming   || Groovy          ||
 || Domain-specific languages  || Groovy, Scala   ||
-|| Functional programming     || Groovy, Scala, Clojure, Erlang ||
-|| Concurrency                || Groovy, Erlang, Scala, Clojure ||
-|| Distributed concurrency    || Erlang, Clojure ||
+|| Functional programming     || Groovy, Scala, Erlang ||
+|| Concurrency                || Groovy, Erlang, Scala ||
+|| Distributed concurrency    || Erlang ||
 || Prototype-based programming || !JavaScript, !CoffeeScript ||
 || Dynamic scripting          || Groovy, !JavaScript ||
 || Web programming models     || Scala, !JavaScript (Node.js) ||
-|| Lazy data structures       || Clojure, Erlang ||
+|| Lazy data structures       || Erlang ||
