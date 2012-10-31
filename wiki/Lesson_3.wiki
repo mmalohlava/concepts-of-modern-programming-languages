@@ -11,7 +11,7 @@
 
 == Resources ==
 
-Grab the [http://code.google.com/p/concepts-of-modern-programming-languages/downloads/detail?name=lecture%203.zip&can=2&q= lecture3.zip] file to get the slides and code examples to work with during the lesson. 
+Grab the [http://code.google.com/p/concepts-of-modern-programming-languages/downloads/detail?name=lecture%203.zip&can=2&q= lecture3.zip] file to get code examples to work with during the lesson. 
 
 == Homework ==
 
