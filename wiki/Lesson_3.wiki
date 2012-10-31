@@ -19,19 +19,18 @@
 // ...
 
 object ComplexNumbers {
-	// The following line is intentionally left here as a part of the solution to help you. 
-	// If you can find a solution without the line, feel free to remove it.
-	implicit def intToReal(real: Int): RealPart = new RealPart(real)
+	// ...
+	implicit def intToComplex(num: Int) = Complex(num, 0)
 
 	
 	def main(args: Array[String]) {
 		
 		println(Complex(1,2)) // 1+2i
-		
-		println(1~2 + 3~2) // 4+4i
 
-		val c = 2~3 + 1~4
-		println(-c) // -3-7i
+		println(1 + 2*I + I*3 + 2) // 3+5i
+
+		val c = (2+3*I + 1 + 4*I) * I
+		println(-c) // 7-3i
 	}
 }
 }}}
