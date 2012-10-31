@@ -12,7 +12,7 @@
 == Homework ==
 
 {{{
-// Add necessary class and object definitions in order to make the statements in the main work.
+// Add necessary class, object, and implicit def definitions in order to make the statements in the main work.
 
 // ...
 // ...
@@ -20,7 +20,6 @@
 
 object ComplexNumbers {
 	// ...
-	implicit def intToComplex(num: Int) = Complex(num, 0)
 
 	
 	def main(args: Array[String]) {
