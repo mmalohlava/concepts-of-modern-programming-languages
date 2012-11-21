@@ -18,4 +18,4 @@ startSignal << 50
 threads*.join()
 println "Done"
 
-//TASK Use a DataflowQueue to output the sorted numbers instead of printing them out
+//TASK Use a DataflowQueue to output the sorted numbers instead of printing them out directly

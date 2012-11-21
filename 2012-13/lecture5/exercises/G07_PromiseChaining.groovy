@@ -25,6 +25,6 @@ withPool {
             download('http://www.gpars.org') >> hash,
             loadFile('/coolStuff/gpars/website/index.html') >> hash
     ], compare) >> { println "Comparison result: $it" }
-    //TODO Block here until the whole calculation finishes
+    //TASK Block here until the whole calculation finishes
     println 'Finished'
 }
