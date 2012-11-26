@@ -78,14 +78,14 @@ class Attendee extends DefaultActor {
     void act() {
         event << new Registration(name, this)
         react { msg1 ->
-            println "Attendee $name: " + msg1
+            println "Attendee $name: " + msg1  //Submitted
             react { msg2 ->
-                println "Attendee $name: " + msg2
+                println "Attendee $name: " + msg2  //Validated or not
                 if (msg2 == 'Validated') {
                     react { msg3 ->
-                        println "Attendee $name: " + msg3
+                        println "Attendee $name: " + msg3  //Registered
                         react { idMessage ->
-                            println "Attendee $name: Received my registration id " + idMessage
+                            println "Attendee $name: Received my registration id " + idMessage  //ID arrived
                             registrationId = idMessage
                         }
                     }

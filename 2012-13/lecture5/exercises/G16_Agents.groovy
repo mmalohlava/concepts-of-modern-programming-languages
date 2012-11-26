@@ -10,6 +10,7 @@ println event.instantVal
 
 Thread.start {
     event { it << 'Alice' }
+    //TASK Try to read the state of the agent here (using either val or instantVal
     event { it << 'Susan' }
 }
 
