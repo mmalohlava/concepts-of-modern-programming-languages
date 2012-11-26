@@ -1,6 +1,5 @@
 #summary Concurrency in modern languages - Actors, Agents, Dataflow, Fork/Join, Stm and other
 #labels Featured
-
 #sidebar TOC
 
 = Lesson 5 details =
