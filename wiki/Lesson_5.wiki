@@ -1,0 +1,31 @@
+#summary Concurrency in modern languages - Actors, Agents, Dataflow, Fork/Join, Stm and other
+#labels Featured
+
+#sidebar TOC
+
+= Lesson 5 details =
+
+== Agenda ==
+
+  * Thread pools
+  * Fork/Join
+  * Parallel collections
+  * Actors
+  * Dataflow
+  * State management
+
+== Preparation ==
+
+  * Grab Groovy from [http://groovy.codehaus.org/Download the groovy download page]
+  * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
+
+== Resources ==
+
+Grab the [http://code.google.com/p/concepts-of-modern-programming-languages/downloads/detail?name=lecture5.zip&can=2&q= lecture5.zip] file to get the slides and code examples to work with during the lesson.
+
+
+== Homework ==
+
+{{{
+
+}}}
