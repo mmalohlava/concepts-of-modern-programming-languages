@@ -10,7 +10,6 @@
 <wiki:comment>
    * [http://code.google.com/p/concepts-of-modern-programming-languages/wiki/Lesson_7 Lesson 7] - !JavaScript
 </wiki:comment>
- * [Homeworks]
  * Cheat sheets
    * [GroovyCheatsheet Groovy]
    * [ScalaCheatsheet Scala]
