@@ -1,3 +1,5 @@
+#summary Scala introduction
+#sidebar TOC
 = Lesson 6 details =
 
 == Preparation ==
