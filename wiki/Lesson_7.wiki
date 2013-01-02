@@ -10,4 +10,4 @@
 
 == Resources ==
 
-Grab the [http://code.google.com/p/concepts-of-modern-programming-languages/downloads/detail?name=lecture6.zip&can=2&q= lecture6-7.zip] file to get code examples to work with during the lesson. 
+Grab the [http://code.google.com/p/concepts-of-modern-programming-languages/downloads/detail?name=lecture6-7.zip&can=2&q= lecture6-7.zip] file to get code examples to work with during the lesson. 
