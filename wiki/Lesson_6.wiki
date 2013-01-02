@@ -1,4 +1,4 @@
-#summary Scala introduction
+#summary Prototype-based languages
 #sidebar TOC
 = Lesson 6 details =
 
