@@ -1,0 +1,13 @@
+#summary Prototype-based languages
+#sidebar TOC
+= Lesson 7 details =
+
+== Preparation ==
+
+  * Install IO langauge from [http://iolanguage.org/]
+  * Install Node.js from [http://nodejs.org/]
+  * Binaries for Windows (32-bit) will be available during the lecture
+
+== Resources ==
+
+Grab the [http://code.google.com/p/concepts-of-modern-programming-languages/downloads/detail?name=lecture6.zip&can=2&q= lecture6-7.zip] file to get code examples to work with during the lesson. 
