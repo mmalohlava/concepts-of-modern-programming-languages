@@ -1,0 +1,39 @@
+#summary Scala introduction
+#sidebar TOC
+
+= Lesson 3 details =
+
+== Preparation ==
+
+  * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
+  * Install Eclipse Indigo from [http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/indigosr2]
+  * In Eclipse, install Scala-IDE from update site at [http://download.scala-ide.org/sdk/e37/scala29/stable/site/]
+
+== Resources ==
+
+Grab the [http://code.google.com/p/concepts-of-modern-programming-languages/downloads/detail?name=lecture3-4.zip&can=2&q= lecture3-4.zip] file to get code examples to work with during the lesson. 
+
+== Homework ==
+
+{{{
+// Add necessary class, object, and implicit def definitions in order to make the statements in the main work.
+
+// ...
+// ...
+// ...
+
+object ComplexNumbers {
+	// ...
+
+	
+	def main(args: Array[String]) {
+		
+		println(Complex(1,2)) // 1+2i
+
+		println(1 + 2*I + I*3 + 2) // 3+5i
+
+		val c = (2+3*I + 1 + 4*I) * I
+		println(-c) // 7-3i
+	}
+}
+}}}
