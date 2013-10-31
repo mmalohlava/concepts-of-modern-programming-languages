@@ -1,0 +1,8 @@
+<E20.HelloWorldSpec-stats timestamp="1352881707699"><stats expectations="3" examples="3" successes="3" time="20"></stats></E20.HelloWorldSpec-stats>
+<E20.HelloWorldSpec-stats timestamp="1352881819344"><stats expectations="3" examples="3" successes="3" time="20"></stats></E20.HelloWorldSpec-stats>
+<E20.HelloWorldSpec-results timestamp="1352881838481"><result location="E20.HelloWorldSpec (HelloWorldSpec.scala:13)" id="350766983"><stats expectations="1" examples="1" failures="1" time="9"></stats></result>
+</E20.HelloWorldSpec-results>
+<E20.HelloWorldSpec-stats timestamp="1352881838495"><stats expectations="3" successes="2" examples="3" failures="1" time="20"><trend><stats failures="1" successes="-1" time="20"></stats></trend></stats></E20.HelloWorldSpec-stats>
+<E20.HelloWorldSpec-results timestamp="1352881873746"><result location="E20.HelloWorldSpec (HelloWorldSpec.scala:13)" id="350766983"><stats expectations="1" examples="1" failures="1" time="8"></stats></result>
+</E20.HelloWorldSpec-results>
+<E20.HelloWorldSpec-stats timestamp="1352881873775"><stats expectations="3" successes="2" examples="3" failures="1" time="18"></stats></E20.HelloWorldSpec-stats>
