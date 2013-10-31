@@ -6,8 +6,8 @@
 == Preparation ==
 
   * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
-  * Install Eclipse Indigo from [http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/indigosr2]
-  * In Eclipse, install Scala-IDE from update site at [http://download.scala-ide.org/sdk/e37/scala29/stable/site/]
+  * Install Eclipse Juno or Kepler from [http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/keplersr1]
+  * In Eclipse, install Scala-IDE from update site at [http://download.scala-ide.org/sdk/e38/scala210/stable/site]
 
 == Resources ==
 
