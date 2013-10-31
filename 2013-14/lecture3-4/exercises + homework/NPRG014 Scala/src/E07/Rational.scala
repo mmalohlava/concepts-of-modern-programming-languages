@@ -21,14 +21,9 @@ class Rational(n: Int, d: Int) {
 	def / (that: Rational) = new Rational(numer * that.denom, denom * that.numer)
 	def unary_- = new Rational(-numer, denom)
 
-	def ~ (dummy: R) = this
-	
 	override def toString = numer + "/" + denom
 	private def gcd(a: Int, b: Int): Int = if (b == 0) a else gcd(b, a % b)
 }
-
-class R
-object R extends R
 
 object Rational {
 	def apply(n:Int, d: Int) = new Rational(n, d)
@@ -41,11 +36,9 @@ object Rational {
 		println(c)
 		
 		/* ASSIGNMENT
-		 * Introduce necessary definitions in order to make the statement 
-		 * below possible. It should print out "3/2"
+		 * Introduce necessary definitions in order to make the statement below possible. It should print out "3/2"
 		 * 
 		 * println(2/3 ~ R + 5/6 ~ R)
 		 */
-		println(2/3 ~ R + 5/6 ~ R)
 	}
 }
