@@ -25,7 +25,7 @@ object StaticTypingMain {
 		 * Make the following statements print: "Integer: 3"
 		 */
 		value = 3
-		printValue(value)
+		printValue(value.asInstanceOf[Int])
 		
 	
 		val valueI = 5

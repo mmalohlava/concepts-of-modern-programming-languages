@@ -18,9 +18,10 @@ class Ellipse extends Oval
 object TypeInference {
 
 	/* ASSIGNMENT:
-	 * Change the getShape declaration so that the application prints out "Drawing general shape"
+	 * Change the getShape declaration so that the application 
+	 * prints out "Drawing general shape"
 	 */
-	def getShape(id: Int) = 
+	def getShape(id: Int): Shape = 
 		if (id == 0) {
 			new Rectangle
 		} else {

@@ -18,11 +18,7 @@ class Logger(where: PrintStream) {
 /* ASSIGNMENT:
  * Change the AppLogger object line to print: ">> " + msg
  */
-object AppLogger extends Logger(Console.out) {
-	override def log(msg: String) {
-		super.log(">> " + msg)
-	}
-}
+object AppLogger extends Logger(Console.out)
 
 
 

@@ -29,6 +29,7 @@ class MyList[T] private(private val item: T, private val next: MyList[T]) {
 		result.toString()
 	}
 	
+	def apply(idx: Int): T = item
 }
 
 object MyList {
@@ -52,8 +53,9 @@ object CompanionExample {
 		/* ASSIGNMENT
 		 * Extend the class MyList[T] so that the following line prints "1". You don't have to consider any other inputs than 0.
 		 * 
-		 * println(lst(0))
+		 * println(list(0))
 		 */
+		println(list(0))
 	}
 	
 }
