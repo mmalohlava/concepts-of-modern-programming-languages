@@ -1,6 +1,5 @@
 #summary High-level concurrency principles in modern languages
 #labels Featured
-
 #sidebar TOC
 
 = Lesson 6 details =
