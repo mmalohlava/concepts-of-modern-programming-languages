@@ -6,7 +6,7 @@
 == Preparation ==
 
   * Install Java (if you don't have it installed) from [http://www.oracle.com/technetwork/java/javase/downloads/index.html the Java download site]
-  * Install Scala-IDE from [http://scala-ide.org/download/sdk.html]
+  * Install Scala-IDE from [http://scala-ide.org/download/sdk.html] (take version for Scala 2.10.4)
 
 == Resources ==
 
