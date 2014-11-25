@@ -2,7 +2,7 @@
 #labels Featured
 #sidebar TOC
 
-= Lesson 6 details =
+= Lesson 5 details =
 
 == Agenda ==
 
