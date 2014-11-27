@@ -31,20 +31,21 @@ import groovyx.gpars.group.DefaultPGroup
 //Three channels deliver daily prices of a particular stock traded at three locations - Paris, Vienna and Chicago.
 //The prices are in EUR for Paris and Vienna and in USD for Chicago.
 //A fourth channels delivers daily exchange rates for EUR to USD conversion (price of one USD in EUR).
-//The operator-based calculation uses several intermediate channels and three operators to:
+//The asynchronous calculation needs to:
 //  1. convert USD prices to EUR
 //  2. calculate daily average prices in EUR of the stock across all three markets
 //  3. calculate a five-day moving average of the price calculated in 2.
-//The output of 2. and 3. each comes from a separate channel (avgPrices and fiveDayAverages, respectively).
-//The two channels are consumed by tasks that print the values on the screen.
+//The output of 2. and 3. each comes out through a separate channel (avgPrices and fiveDayAverages, respectively).
+//These two output channels are consumed by tasks that print the values on the screen.
 
-//TASK Implement the three missing operators, possibly connected with additional channels, so that the calculation passes.
-//The first operator will convert Chicago prices from USD to EUR
-//The second operator will calculate a daily average price in EUR using the three daily prices from different locations as its input
-//The third operator will take the daily average prices calculated by the second operator and output a five-day moving average (an average of the last five days, including today).
+//TASK Implement the missing asynchronous operations, possibly connected with additional channels, so that the calculation passes.
+//The first operation will convert Chicago prices from USD to EUR
+//The second operation will calculate a daily average price in EUR using the three daily prices from different locations as its input
+//The third operation will take the daily average prices calculated by the second operator and output a five-day moving average (an average of the last five days, including today).
 //If the history is shorter than five days, use only the days that are available to calculate the average.
+//All the operations need to run mutually asynchronously.
 //
-//Hint for GPars operators syntax:
+//Hint for GPars operator syntax:
 /*
     operator(inputs: [...], outputs: [...], stateObject: [key: value]) { a, b, c, d ->  //values from all input channels
         assert stateObject.key == value //access the state object through the key
@@ -57,7 +58,7 @@ import groovyx.gpars.group.DefaultPGroup
 
 */
 
-//Dummy price and exchange rate data
+//Dummy price and exchange rate data for 30 days
 final prices1 = [10, 11, 12, 10, 9, 8, 7, 9, 6, 7,
                  10, 9, 12, 12, 14, 14, 12, 13, 12, 14,
                  10, 11, 10, 12, 14, 15, 12, 13, 14, 12]
